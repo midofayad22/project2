@@ -561,3 +561,79 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
     padding: 5px 8px;
   }
 }
+/* تنسيق زر TikTok باللون الرسمي */
+.social-icon.tiktok {
+  color: #000000; /* اللون الأسود الأساسي */
+  transition: all 0.3s ease;
+}
+
+/* تأثير التمرير (Hover) باللون الأزرق الوردي الشهير للتيك توك */
+.social-icon.tiktok:hover {
+  color: #ff0050; /* درجة الوردي الخاصة بـ TikTok */
+  transform: translateY(-3px); /* رفعة بسيطة عند الوقوف بالماوس */
+}
+/* زر تيك توك باللون الأسود مثل GitHub */
+.btn-tiktok {
+  background-color: #000000; /* خلفية سوداء */
+  color: #ffffff;            /* النص باللون الأبيض */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;       /* نفس حواف الأزرار الدائرية */
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-tiktok:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* حجم الأيقونة والتأثير الملون لشعار تيك توك */
+.tiktok-icon {
+  width: 20px;
+  height: 20px;
+  /* إضافة الظل الأزرق والأحمر المميز لتيك توك */
+  filter: drop-shadow(-2px -1px 0px #00f2fe) drop-shadow(2px 1px 0px #fe2c55);
+}
+/* تنسيق زر تيك توك باللون الأسود والأبيض فقط */
+.btn-tiktok {
+  background-color: #000000 !important; /* خلفية سوداء ناصعة */
+  color: #ffffff !important;            /* النص باللون الأبيض */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 50px;       /* حواف دائرية مثل باقي الأزرار */
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* لون الأيقونة أبيض */
+.btn-tiktok svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff !important;
+}
+
+/* تأثير بسيط عند الوقوف بالماوس */
+.btn-tiktok:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+/* تخصيص زر تيك توك ليكون أسود وأبيض */
+.social-btn.tiktok {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.social-btn.tiktok i,
+.social-btn.tiktok span {
+    color: #ffffff !important;
+}
