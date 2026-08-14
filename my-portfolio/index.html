@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الحميد فياض | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .stat-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .stat-card-link:hover .stat-box {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+        
+        /* تنسيق أنيق ومستجيب لزر التفاصيل الأكاديمية */
+        .academic-btn {
+            background-color: #1a1a1a !important;
+            color: #D4AF37 !important;
+            border: 2px solid #D4AF37 !important;
+            padding: 10px 18px !important;
+            border-radius: 8px !important;
+            cursor: pointer !important;
+            margin-top: 12px !important;
+            font-family: 'Tajawal', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            transition: all 0.3s ease !important;
+            display: inline-block !important;
+        }
+        .academic-btn:hover {
+            background-color: #D4AF37 !important;
+            color: #111 !important;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
+        }
+        .academic-btn:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Cursor Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">عبد الحميد <span class="gold-text">فياض</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">الرئيسية</a></li>
+                <li><a href="#skills">المهارات والتعليم</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="#gallery">المعرض المرئي</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/201091573063" target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> تواصل معي</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="avatar-box">
+                <img src="profile.jpg" alt="عبد الحميد فياض" class="profile-img">
+                <span class="online-dot"></span>
+            </div>
+
+            <div class="badge"><i class="fa-solid fa-circle"></i> متاح لتطوير البرمجيات والإنتاج المرئي</div>
+
+            <h1 class="main-title">عبد الحميد فياض</h1>
+            <p class="main-subtitle">طالب هندسة حاسبات & مطور برمجيات متكامل <span class="highlight">Full-Stack Developer</span> & مصور وفوتوجرافر</p>
+
+            <div class="cta-group">
+                <a href="#projects" class="btn-main">استعرض الأعمال</a>
+                <a href="https://github.com/midofayad22" target="_blank" class="btn-sec"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <a href="#projects" class="stat-card-link" title="انتقل لمشاريع الويب">
+                    <div class="stat-box">
+                        <h3>2</h3>
+                        <p>مشاريع ويب متكاملة <i class="fa-solid fa-arrow-down-long" style="color: #D4AF37;"></i></p>
+                    </div>
+                </a>
+
+                <a href="#gallery" class="stat-card-link" title="انتقل للمعرض المرئي">
+                    <div class="stat-box">
+                        <h3>300+</h3>
+                        <p>عمل فوتوغرافي ومرئي <i class="fa-solid fa-arrow-down-long" style="color: #D4AF37;"></i></p>
+                    </div>
+                </a>
+
+                <a href="#skills" onclick="openAcademicInfo()" class="stat-card-link" title="عرض التفاصيل الأكاديمية">
+                    <div class="stat-box">
+                        <h3>هندسة حاسبات</h3>
+                        <p>تأسيس برمجيات وأكاديمي <i class="fa-solid fa-graduation-cap" style="color: #D4AF37;"></i></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Education Section -->
+    <section class="projects-section" id="skills">
+        <h2 class="sec-title">المهارات والخلفية الأكاديمية</h2>
+        
+        <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
+            
+            <!-- Card 1: Software Development -->
+            <div class="custom-card">
+                <div class="card-tag">Software Development</div>
+                <h3>تطوير البرمجيات والويب</h3>
+                <p>تطوير تطبيقات الويب المتكاملة (Front-End & Back-End)، كتابة كود نظيف ومعمارية برمجية متماسكة.</p>
+                <div class="tech-stack">
+                    <span>C / C++</span>
+                    <span>Python</span>
+                    <span>JavaScript (ES6+)</span>
+                    <span>HTML5 / CSS3</span>
+                    <span>Node.js</span>
+                    <span>Git / GitHub</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Photography & Media -->
+            <div class="custom-card">
+                <div class="card-tag">Photography & Media</div>
+                <h3>التصوير وصناعة المحتوى</h3>
+                <p>إنتاج وصناعة المحتوى المرئي، التصوير الفوتوغرافي للبيئة والطبيعة، تحرير الصوت والفيديو لمنصات السوشيال ميديا وYouTube.</p>
+                <div class="tech-stack">
+                    <span>Nature Photography</span>
+                    <span>Video Editing</span>
+                    <span>Audio Editing</span>
+                    <span>Digital Media</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Computer Engineering -->
+            <div class="custom-card" id="academicCard">
+                <div class="card-tag">Computer Engineering</div>
+                <h3>المستوى التعليمي والجامعي</h3>
+                <p>طالب بكلية الهندسة - قسم حاسبات، دراسة تأسيسية متعمقة للحوسبة والبرمجة مع شهادات CS50.</p>
+                
+                <button onclick="toggleAcademicInfo()" id="academicBtn" class="academic-btn">
+                    <i class="fa-solid fa-graduation-cap"></i> عرض التفاصيل الأكاديمية
+                </button>
+                
+                <div id="academicDetails" style="display: none; margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.6); border-radius: 8px; border-right: 4px solid #D4AF37;">
+                    <p style="margin: 0; font-size: 0.95rem; color: #ffffff; line-height: 1.7;">
+                        🎓 <strong>إتمام السنة الإعدادية - كلية الهندسة:</strong> <br>
+                        ✨ حاصل على معدل تراكمي ممتاز <strong>GPA: 3.71</strong>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section (بدون ID مضلل للجافاسكريبت القديم) -->
+    <section class="projects-section" id="projects">
+        <h2 class="sec-title">المشاريع المنفذة</h2>
+        
+        <div class="projects-grid-static" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
+            <!-- Project 1 -->
+            <a href="https://elomda-fayad-trucks.vercel.app" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+              <div class="custom-card">
+                <div class="card-tag">Full-Stack & Front-End (Vercel)</div>
+                <h3>موقع شركة العمدة فياض - المنصة الكاملة</h3>
+                <p>تطبيق ويب متكامل لعرض واستيراد شاحنات النقل الثقيل من ألمانيا. مرفوع ومباشر على Vercel مع تصميم عصري متجاوب.</p>
+                <div class="tech-stack">
+                  <span>Full-Stack</span>
+                  <span>Node.js</span>
+                  <span>HTML/CSS</span>
+                  <span>JavaScript</span>
+                  <span>Vercel</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="https://fayad-ruddy.vercel.app" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+              <div class="custom-card">
+                <div class="card-tag">Front-End (الإصدار الأول)</div>
+                <h3>موقع شركة العمدة فياض - الواجهة البرمجية</h3>
+                <p>الإصدار الأول المخصص للواجهة الأمامية وتنسيق الهوية البصرية وتجربة المستخدم لعرض الشاحنات.</p>
+                <div class="tech-stack">
+                  <span>Front-End</span>
+                  <span>HTML/CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="projects-section" id="gallery">
+        <h2 class="sec-title">المعرض البصري والمرئي</h2>
+        <p class="sec-desc">استعراض أبرز الأعمال المرفوعة (+40 عمل من أصل +300 إنتاج مرئي وفوتوغرافي)</p>
+        
+        <div class="gallery-grid" id="galleryContainer">
+            <div class="gallery-card-placeholder" style="border: 1px dashed #D4AF37; padding: 40px; text-align: center; border-radius: 12px; background: rgba(255,255,255,0.02);">
+                <i class="fa-solid fa-camera-retro" style="font-size: 2.5rem; color: #D4AF37; margin-bottom: 15px;"></i>
+                <p style="color: #a0a0a0;">قريباً.. سيتم فتح المعرض التفاعلي لعرض الصور الفوتوغرافية والفيديوهات فور ربط الـ Back-End API</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Contact -->
+    <section class="contact-section" id="contact">
+        <h2 class="sec-title">تواصل معي عبر المنصات الرسمية</h2>
+        <div class="social-wrapper">
+            <a href="https://github.com/midofayad22" target="_blank" class="social-btn github" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/abdullhamid-f-800bb5379" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/abdullhamid_fayad22" target="_blank" class="social-btn instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/share/1DRtidKkm7/" target="_blank" class="social-btn facebook" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://youtube.com/@abdullhamid-mido22" target="_blank" class="social-btn youtube" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>©️ 2026 عبد الحميد فياض - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        function toggleAcademicInfo() {
+            const details = document.getElementById('academicDetails');
+            const btn = document.getElementById('academicBtn');
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> إخفاء التفاصيل الأكاديمية';
+            } else {
+                details.style.display = "none";
+                btn.innerHTML = '<i class="fa-solid fa-graduation-cap"></i> عرض التفاصيل الأكاديمية';
+            }
+        }
+
+        function openAcademicInfo() {
+            const details = document.getElementById('academicDetails');
+            const btn = document.getElementById('academicBtn');
+            details.style.display = "block";
+            btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> إخفاء التفاصيل الأكاديمية';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
