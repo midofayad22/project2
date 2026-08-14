@@ -1,3 +1,41 @@
+/* تنسيق شبكة معرض الصور 36 صورة */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* تنسيق كارد أو إطار الصورة الفردية مع تأثيرات 3D ناعمة */
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    aspect-ratio: 4 / 5; /* يحافظ على تناسق الصور بالطول والعرض */
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* الصور داخل الإطار بدون حواف بيضاء */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يمنع تشوه الصورة ويملأ المربع تماماً بدون حواف بيضاء */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
 :root {
     /* ألوان رصاصية فاخرة وذهبية متناسقة */
     --bg-light-slate: #d9e0e8;
@@ -110,14 +148,7 @@ body {
 .sec-title { text-align: center; font-size: 2.3rem; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; }
 .sec-desc { text-align: center; color: var(--text-muted); margin-bottom: 35px; }
 
-.gallery-card-placeholder {
-    background: var(--card-bg);
-    border: 2px dashed var(--gold);
-    border-radius: 20px;
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--text-muted);
-}
+
 
 /* أزرار التواصل */
 .social-wrapper { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 0 8%; }
@@ -134,3 +165,356 @@ body {
 .social-btn:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 
 footer { text-align: center; padding: 30px; color: var(--text-muted); font-weight: 600; border-top: 1px solid rgba(197, 155, 39, 0.2); }
+.-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.visual-gallery-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.visual-gallery-section .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* تصميم البطاقة بتأثير 3D فاخر ومتناسق */
+.gallery-3d-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 24px;
+    padding: 45px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    border: 1px solid rgba(212, 175, 55, 0.25); /* متناسق مع لون الأزرار الذهبي في موقعك */
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* تأثير الـ 3D عند مرور الماوس */
+.gallery-3d-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 0 10px 25px rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+}
+
+/* الأيقونة بتأثير 3D بارز */
+.icon-3d-wrapper {
+    font-size: 3.8rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 5px 10px rgba(212, 175, 55, 0.3));
+}
+
+.gallery-3d-card:hover .icon-3d-wrapper {
+    transform: translateZ(30px) scale(1.1);
+}
+
+/* تنسيق النصوص داخل البطاقة */
+.gallery-3d-card h2 {
+    font-size: 2.2rem;
+    color: #2b2b2b;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.gallery-3d-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* زر الاستعراض الداخلي */
+.explore-badge {
+    display: inline-block;
+    background: #d4af37;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.gallery-3d-card:hover .explore-badge {
+    background: #c49f2f;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+}
+.gallery-card, .gallery-card-link {
+    cursor: pointer;
+    position: relative;
+    z-index: 10; /* عشان تضمن إن العنصر فوق أي طبقة شفافة تانية */
+}
+
+/* لو فيه طبقة شفافة (Overlay) بالغلط فوق العنصر بتمنع الكليك */
+.gallery-card * {
+    pointer-events: none; /* بيخلي الكليك يوصل للكونتينر الأساسي مباشرة */
+}
+/* ستايل زرار المعرض النهائي والمزود بانيميشن 3D */
+.final-gallery-btn {
+    display: inline-block;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 24px;
+    text-decoration: none;
+    color: #333333;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 2px solid #eaeaea;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.final-gallery-btn:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(13, 110, 253, 0.15);
+    border-color: #0d6efd;
+    color: #333333;
+}
+
+.gallery-icon {
+    font-size: 55px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.final-gallery-btn:hover .gallery-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.final-gallery-btn h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.final-gallery-btn p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.gallery-badge {
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.final-gallery-btn:hover .gallery-badge {
+    background-color: #0b5ed7;
+}
+/* حل مشكلة الصور المقطوعة */
+.gallery-item {
+    width: 100%;
+    height: auto; /* بدل 250px عشان تاخد طولها الطبيعي */
+    max-height: 500px; /* حد أقصى عشان ما تبقاش عملاقة */
+    object-fit: contain; /* عشان الصورة تظهر كاملة مش متقصقصة */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa; /* خلفية خفيفة ورا الصورة */
+}
+/* --- تعديل شبكة الـ 36 صورة بدون حواف بيضاء --- */
+.gallery-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 15px !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.gallery-item {
+    width: 100% !important;
+    height: 280px !important; /* طول ثابت وموسب لكل الصور */
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+}
+
+.gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* بيخلي الصورة تملأ المربع تماماً بدون حواف بيضاء وبدون تشوه */
+    display: block !important;
+}
+/* --- تعديلات ميدو المضمونة لعدم التداخل مع الـ 373 سطر --- */
+.mido-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.mido-gallery-card-item {
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #000 !important;
+}
+
+.mido-gallery-card-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.mido-main-box {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 16px !important;
+    padding: 20px 25px !important;
+    max-width: 600px !important;
+    margin: 30px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04) !important;
+}
+
+.mido-box-icon {
+    width: 55px !important;
+    height: 55px !important;
+    background: #f39c12 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    color: #fff !important;
+}
+
+.mido-box-content {
+    text-align: right !important;
+    flex: 1 !important;
+}
+
+.mido-box-content h3 {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin-bottom: 5px !important;
+}
+
+.mido-box-content p {
+    font-size: 0.85rem !important;
+    color: #666 !important;
+    margin-bottom: 10px !important;
+}
+
+.mido-box-content a {
+    color: #f39c12 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+}
+/* --- الحل النهائي المباشر لشبكة الـ 36 صورة --- */
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 20px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.gallery-grid img {
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    display: block !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+.mido-main-box {
+    background: #ffffff !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 16px !important;
+    padding: 20px 25px !important;
+    max-width: 600px !important;
+    margin: 30px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04) !important;
+}
+
+.mido-box-icon {
+    width: 55px !important;
+    height: 55px !important;
+    background: #f39c12 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    color: #fff !important;
+}
+
+.mido-box-content {
+    text-align: right !important;
+    flex: 1 !important;
+}
+
+.mido-box-content h3 {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin-bottom: 5px !important;
+}
+
+.mido-box-content p {
+    font-size: 0.85rem !important;
+    color: #666 !important;
+    margin-bottom: 10px !important;
+}
+
+.mido-box-content a {
+    color: #f39c12 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+}

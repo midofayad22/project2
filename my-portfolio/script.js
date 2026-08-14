@@ -146,3 +146,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.getElementById('visualGalleryBtn').addEventListener('click', function() {
+    // الكود الخاص بفتح المعرض المرئي أو التمرير ليه
+    console.log("تم النقر على المعرض البصري بنجاح");
+    
+    // مثال لو عايز تنقل المستخدم للقسم الخاص بيه بسلاسة:
+    document.getElementById('gallery-section').scrollIntoView({ behavior: 'smooth' });
+});
+// --- تأثير الـ 3D الحركي التفاعلي مع حركة الماوس ---
+const midoCard = document.querySelector('.mido-main-box');
+
+if (midoCard) {
+    midoCard.addEventListener('mousemove', (e) => {
+        const rect = midoCard.getBoundingClientRect();
+        const x = e.clientX - rect.left; // موقع الماوس أفقيًا داخل الكارد
+        const y = e.clientY - rect.top;  // موقع الماوس رأسيًا داخل الكارد
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // حساب زوايا الميلان (تغيير القيم للتحكم في قوة الحركة)
+        const rotateX = -((y - centerY) / centerY) * 8; 
+        const rotateY = ((x - centerX) / centerX) * 8;  
+
+        midoCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    midoCard.addEventListener('mouseleave', () => {
+        // العودة للوضع الطبيعي بسلاسة لما الماوس يخرج
+        midoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+}

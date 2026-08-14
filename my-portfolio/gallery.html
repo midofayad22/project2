@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الحميد فياض | المعرض البصري والمرئي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة الخطوط لو مستخدمها -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-light-slate, #d9e0e8); font-family: 'Tajawal', sans-serif; padding: 40px 20px;">
+
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <!-- زر العودة للرئيسية -->
+        <a href="index.html" style="display: inline-block; margin-bottom: 30px; text-decoration: none; background: #c59b27; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold;">← العودة للرئيسية</a>
+        
+        <h1 style="text-align: center; color: #1e293b; margin-bottom: 10px;">المعرض البصري والمرئي</h1>
+        <p style="text-align: center; color: #475569; margin-bottom: 40px;">استعراض 36 عمل فوتوغرافي مميز</p>
+
+        <!-- شبكة عرض الصور -->
+        <div class="gallery-grid">
+            <script>
+                for (let i = 1; i <= 36; i++) {
+                    document.write(`<img src="assets/images/photo${i}.jpg" alt="Gallery Photo ${i}" class="gallery-item">`);
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
