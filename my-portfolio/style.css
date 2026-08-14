@@ -518,3 +518,46 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
     text-decoration: none !important;
     font-size: 0.9rem !important;
 }
+/* تحسين التجاوب لشاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  
+  /* منع الشاشة كلها من المهزوز أو الخروج يميناً ويساراً */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* جعل الهيدر منظم ومرن */
+  header, nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* تنسيق القائمة لتتوسط الشاشة أو تجعل الروابط القابلة للسحب أفقياً */
+  .nav-links, nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* يتيح السحب الأفقي للروابط لو زادت */
+    white-space: nowrap;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px 5px;
+    -webkit-overflow-scrolling: touch; /* جعل السحب سلس في الآيفون */
+  }
+
+  /* لإخفاء شريط السحب البشع وإبقاء حركة السحب شغال */
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* تصغير حجم الخطوط قليلاً للشاشات الصغيرة */
+  .nav-links a, nav ul li a {
+    font-size: 0.95rem;
+    padding: 5px 8px;
+  }
+}
