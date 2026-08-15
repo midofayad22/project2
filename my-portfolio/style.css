@@ -362,12 +362,11 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
 
 .gallery-item {
     width: 100% !important;
-    height: 280px !important; /* طول ثابت وموسب لكل الصور */
+    height: auto !important;
     overflow: hidden !important;
     border-radius: 12px !important;
     background: #000 !important;
 }
-
 .gallery-item img {
     width: 100% !important;
     height: 100% !important;
@@ -386,7 +385,7 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
 
 .mido-gallery-card-item {
     width: 100% !important;
-    height: 300px !important;
+    height: auto !important;
     overflow: hidden !important;
     border-radius: 12px !important;
     background: #000 !important;
@@ -460,8 +459,9 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
 
 .gallery-grid img {
     width: 100% !important;
-    height: 280px !important;
-    object-fit: cover !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    object-fit: contain !important;
     border-radius: 12px !important;
     display: block !important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
@@ -746,4 +746,84 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
   border-color: #d4af37 !important;     /* الإطار يظل ذهبي */
   transform: translateY(-3px) !important; /* ارتفاء بسيط لأعلى عند التمرير */
   box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35) !important;
+}
+/* --- الكود النهائي لإلغاء قص الصور وتعديل الإطار --- */
+.gallery-item,
+.gallery-grid div,
+.mido-gallery-card-item {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.gallery-item img,
+.gallery-grid img,
+.mido-gallery-card-item img {
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    object-fit: cover !important;
+}
+/* --- نافذة عرض الصورة المكبرة بالكامل --- */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* خلفية سوداء شفافة */
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain; /* تظهر الصورة كاملة دون أي قص */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    animation: zoomIn 0.25s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.close-modal:hover {
+    color: #e0a96d; /* لون ذهبي ينطبق مع هويتك عند التمرير */
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* إظهار مؤشر الضغط (اليد) على الكروت والصور */
+.gallery-grid div,
+.gallery-item,
+.mido-gallery-card-item,
+.gallery-grid img {
+    cursor: pointer !important;
+}
+/* لما الصفحة تتحول للغة الإنجليزية أو اتجاه LTR، خلي كل النصوص تتظبط يسار تلقائياً */
+html[dir="ltr"] body, 
+html[lang="en"] body {
+    direction: ltr;
+    text-align: left;
+}
+
+/* تعديل محاذاة النصوص جوه الكروت عشان تب2 من الشمال لما تترجم */
+html[dir="ltr"] .card-overlay, 
+html[dir="ltr"] .skills-card, 
+html[lang="en"] .card-overlay,
+html[lang="en"] .skills-card {
+    text-align: left !important;
 }

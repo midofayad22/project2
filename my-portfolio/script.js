@@ -203,3 +203,76 @@ if (midoCard) {
 
   animateTrail();
 })();
+// --- الكود النهائي والشامل لفتح الصور بالحجم الكامل ---
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('fullImage');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // التقاط أي ضغطة على الصور داخل المعرض الديناميكي
+    document.addEventListener('click', (e) => {
+        const targetImg = e.target.closest('img');
+        if (targetImg && (targetImg.closest('.gallery-grid') || targetImg.closest('.gallery-item') || targetImg.closest('.mido-gallery-card-item'))) {
+            if (modal && modalImg) {
+                modal.style.display = 'flex';
+                modalImg.src = targetImg.src;
+            }
+        }
+    });
+
+    // إغلاق النافذة بالضغط على (X)
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    // إغلاق النافذة بالضغط خارج الصورة
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // إغلاق النافذة بزر Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+// --- حل نهائي مباشر للصور الديناميكية ---
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.querySelector('.close-modal');
+
+        // البحث عن أي صورة داخل المعرض وإعطاؤها أمر الفتح
+        const allImages = document.querySelectorAll('.gallery-grid img, .gallery-item img, .mido-gallery-card-item img');
+        
+        allImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.onclick = function() {
+                if (modal && modalImg) {
+                    modal.style.display = 'flex';
+                    modalImg.src = this.src;
+                }
+            };
+        });
+
+        // زر الإغلاق (X)
+        if (closeBtn) {
+            closeBtn.onclick = () => { modal.style.display = 'none'; };
+        }
+
+        // إغلاق عند الضغط برا الصورة
+        if (modal) {
+            modal.onclick = (e) => {
+                if (e.target === modal) { modal.style.display = 'none'; }
+            };
+        }
+    }, 500); // تأخير نصف ثانية لضمان تحميل الصور الديناميكية أولاً
+});
