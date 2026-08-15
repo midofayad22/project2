@@ -1,4 +1,7 @@
 /* تنسيق شبكة معرض الصور 36 صورة */
+html {
+  scroll-behavior: smooth;
+}
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -715,4 +718,32 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
   background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%) !important;
   color: #ffffff !important;
   transform: scale(1.08) rotate(-4deg) !important;
+}
+/* ===================================================
+   تنسيق زرار عرض التفاصيل الأكاديمية (ذهبي وبأنيميشن ناعم)
+   =================================================== */
+#academicBtn, .academic-btn {
+  background-color: #d4af37 !important; /* الخلفية ذهبية */
+  color: #ffffff !important;            /* الكتابة باللون الأبيض */
+  border: 2px solid #d4af37 !important; /* حدود ذهبية */
+  padding: 10px 20px !important;
+  border-radius: 12px !important;       /* انحناء زوايا أنيق */
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important; /* حركة هادئة وناعمة */
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+/* التغيير عند التمرير بالماوس أو الضغط (Hover) */
+#academicBtn:hover, .academic-btn:hover {
+  background-color: #f8f9fa !important; /* خلفية بيضاء / رصاصي فاتح جداً */
+  color: #d4af37 !important;            /* الكتابة تتحول للون الذهبي */
+  border-color: #d4af37 !important;     /* الإطار يظل ذهبي */
+  transform: translateY(-3px) !important; /* ارتفاء بسيط لأعلى عند التمرير */
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35) !important;
 }
