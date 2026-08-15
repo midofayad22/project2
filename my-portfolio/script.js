@@ -146,13 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-document.getElementById('visualGalleryBtn').addEventListener('click', function() {
-    // الكود الخاص بفتح المعرض المرئي أو التمرير ليه
-    console.log("تم النقر على المعرض البصري بنجاح");
-    
-    // مثال لو عايز تنقل المستخدم للقسم الخاص بيه بسلاسة:
-    document.getElementById('gallery-section').scrollIntoView({ behavior: 'smooth' });
-});
+// عند الضغط على كارت المعرض يفتح صفحة gallery.html فوراً
+const galleryBtn = document.getElementById('visualGalleryBtn');
+if (galleryBtn) {
+  galleryBtn.addEventListener('click', function() {
+    window.location.href = 'gallery.html';
+  });
+}
 // --- تأثير الـ 3D الحركي التفاعلي مع حركة الماوس ---
 const midoCard = document.querySelector('.mido-main-box');
 
@@ -177,3 +177,29 @@ if (midoCard) {
         midoCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     });
 }
+// تشغيل حركة الماوس الذهبية
+(function() {
+  const trail = document.createElement("div");
+  trail.className = "gold-cursor-trail";
+  document.body.appendChild(trail);
+
+  let mouseX = 0, mouseY = 0;
+  let trailX = 0, trailY = 0;
+
+  window.addEventListener("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateTrail() {
+    trailX += (mouseX - trailX) * 0.12;
+    trailY += (mouseY - trailY) * 0.12;
+
+    trail.style.left = `${trailX}px`;
+    trail.style.top = `${trailY}px`;
+
+    requestAnimationFrame(animateTrail);
+  }
+
+  animateTrail();
+})();

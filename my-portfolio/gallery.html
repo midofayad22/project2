@@ -1,36 +1,245 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبد الحميد فياض | المعرض البصري والمرئي</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- مكتبة الخطوط لو مستخدمها -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عبد الحميد فياض | المعرض البصري والمرئي</title>
+  <style>
+    /* --------------------------------------------------
+       1. المتغيرات والألوان الذهبية
+    -------------------------------------------------- */
+    :root {
+      --primary-color: #1a1a1a;
+      --gold-primary: #d4af37;
+      --gold-hover: #c5a028;
+      --gold-shadow: rgba(212, 175, 55, 0.35);
+      
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #212529;
+      --text-muted: #6c757d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      direction: rtl;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --------------------------------------------------
+       2. الهيدر وزرار العودة الذهبي
+    -------------------------------------------------- */
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px 0;
+      margin-bottom: 30px;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    /* زرار العودة الذهبي المطور مع الأنميشن الناعم */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 15px var(--gold-shadow);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5);
+      color: #ffffff;
+    }
+
+    .back-btn:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    .back-btn span {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover span {
+      transform: translateX(5px);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* --------------------------------------------------
+       3. شبكة الصور (Gallery Grid)
+    -------------------------------------------------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background-color: #e9ecef;
+    }
+
+    .card-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover .card-image-wrapper img {
+      transform: scale(1.08);
+    }
+
+    /* الأوفرلاي وتأثير الـ Hover */
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2), transparent);
+      color: #ffffff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.35s ease;
+    }
+
+    .gallery-card:hover .card-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-overlay h3 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .card-overlay span {
+      font-size: 0.85rem;
+      color: #d4af37;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body style="background-color: var(--bg-light-slate, #d9e0e8); font-family: 'Tajawal', sans-serif; padding: 40px 20px;">
+<body>
 
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <!-- زر العودة للرئيسية -->
-        <a href="index.html" style="display: inline-block; margin-bottom: 30px; text-decoration: none; background: #c59b27; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold;">← العودة للرئيسية</a>
-        
-        <h1 style="text-align: center; color: #1e293b; margin-bottom: 10px;">المعرض البصري والمرئي</h1>
-        <p style="text-align: center; color: #475569; margin-bottom: 40px;">استعراض 36 عمل فوتوغرافي مميز</p>
-
-        <!-- شبكة عرض الصور -->
-        <div class="gallery-grid">
-            <script>
-                for (let i = 1; i <= 36; i++) {
-                    document.write(`<img src="assets/images/photo${i}.jpg" alt="Gallery Photo ${i}" class="gallery-item">`);
-                }
-            </script>
-        </div>
+  <!-- الهيدر والزرار الذهبي -->
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="back-btn">
+        <span>→</span> العودة للرئيسية
+      </a>
+      <h1>المعرض البصري والمرئي</h1>
+      <p class="subtitle">36 عمل فوتوغرافي مميز</p>
     </div>
+  </header>
+
+  <!-- المعرض -->
+  <main class="container">
+    <div id="gallery-grid" class="gallery-grid"></div>
+  </main>
+
+  <!-- الجافاسكريبت المظبوط لأسماء ملفاتك photo1.jpg إلى photo36.jpg -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const galleryGrid = document.getElementById("gallery-grid");
+      const totalImages = 36;
+      const imageFolder = "assets/images/";
+
+      for (let i = 1; i <= totalImages; i++) {
+        const card = document.createElement("div");
+        card.className = "gallery-card";
+        card.style.animationDelay = `${(i % 12) * 0.07}s`;
+
+        // المسار الصحيح تماماً لمجلدك والملفات photo1.jpg, photo2.jpg...
+        const imageSrc = `${imageFolder}photo${i}.jpg`;
+
+        card.innerHTML = `
+          <div class="card-image-wrapper">
+            <img 
+              src="${imageSrc}" 
+              alt="عمل فوتوغرافي ${i}" 
+              loading="lazy" 
+            />
+            <div class="card-overlay">
+              <h3>عمل فوتوغرافي #${i}</h3>
+              <span>تصوير فوتوغرافي</span>
+            </div>
+          </div>
+        `;
+
+        galleryGrid.appendChild(card);
+      }
+    });
+  </script>
 
 </body>
 </html>

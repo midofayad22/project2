@@ -637,3 +637,82 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-weigh
 .social-btn.tiktok span {
     color: #ffffff !important;
 }
+/* ===================================================
+   تنسيق كارت المعرض البصري (ذهبي + تفاعلي + منفصل)
+   =================================================== */
+.gallery-standalone-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 850px !important;
+  margin: 0 auto 35px auto !important; /* فصل الكارت بمسافة عن سكشن التواصل */
+}
+
+.gallery-gold-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 20px !important;
+  padding: 22px 28px !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04) !important;
+  cursor: pointer !important;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+/* حركة التفاعل والبريق عند تحريك الماوس على المعرض */
+.gallery-gold-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: rgba(212, 175, 55, 0.8) !important;
+  box-shadow: 0 14px 30px rgba(212, 175, 55, 0.2) !important;
+}
+
+.gallery-gold-card .gallery-card-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  direction: rtl !important;
+}
+
+.gallery-gold-card .gallery-info h3 {
+  color: #1a1a1a !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+}
+
+.gallery-gold-card .gallery-info p {
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 8px !important;
+}
+
+.gallery-gold-card .gallery-link-btn {
+  color: #d4af37 !important; /* ذهبي */
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.gallery-gold-card:hover .gallery-link-btn {
+  transform: translateX(-6px) !important;
+}
+
+.gallery-gold-card .gallery-gold-icon {
+  background: rgba(212, 175, 55, 0.12) !important;
+  color: #d4af37 !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 14px !important;
+  padding: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.gallery-gold-card:hover .gallery-gold-icon {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%) !important;
+  color: #ffffff !important;
+  transform: scale(1.08) rotate(-4deg) !important;
+}
