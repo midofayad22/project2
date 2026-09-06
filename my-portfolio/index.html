@@ -1,65 +1,103 @@
 <!doctype html>
 <html lang="ar" dir="rtl" id="htmlRoot">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبد الحميد فياض | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>عبد الحميد فياض | Front-End Developer</title>
+
+    <meta
+      name="description"
+      content="عبد الحميد فياض — Front-End Developer يبني واجهات ويب حديثة ومتجاوبة مع اهتمام بالتفاصيل البصرية وتجربة المستخدم." />
+
+    <meta name="author" content="Abdullhamid Fayad" />
+    <meta name="theme-color" content="#07110f" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Icons — المسارات بدون تغيير -->
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="icons/icon-32.png" />
+    <link rel="icon" type="image/jpeg" sizes="192x192" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FAYAD" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abdullhamid Fayad | Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Front-End Developer focused on building thoughtful and responsive web experiences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdullhamid-fayad-portfolio.vercel.app/" />
+    <meta property="og:image" content="https://abdullhamid-fayad-portfolio.vercel.app/profile.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Vercel Analytics -->
     <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-    <style>
-        .stat-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .stat-card-link:hover .stat-box {
-            transform: translateY(-5px);
-            border-color: #D4AF37;
-        }
-        
-        /* تنسيق أنيق ومستجيب لزر التفاصيل الأكاديمية */
-        .academic-btn {
-            background-color: #1a1a1a !important;
-            color: #D4AF37 !important;
-            border: 2px solid #D4AF37 !important;
-            padding: 10px 18px !important;
-            border-radius: 8px !important;
-            cursor: pointer !important;
-            margin-top: 12px !important;
-            font-family: 'Tajawal', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 0.95rem !important;
-            transition: all 0.3s ease !important;
-            display: inline-block !important;
-        }
-        .academic-btn:hover {
-            background-color: #D4AF37 !important;
-            color: #111 !important;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
-        }
-        .academic-btn:active {
-            transform: scale(0.96);
-        }
-    </style>
-</head>
-<body>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
 
-    <!-- Dynamic Cursor Glow -->
-    <div class="mouse-glow" id="mouseGlow"></div>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
 
-    <!-- ================= HEADER ================= -->
+  <body>
+    <!-- =====================================================
+       LOADER
+  ====================================================== -->
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+      <div class="loader-inner">
+        <img src="icons/favicon.svg" alt="FAYAD" />
+        <span>FAYAD</span>
+        <div class="loader-progress">
+          <span></span>
+        </div>
+      </div>
+    </div>
 
+    <!-- =====================================================
+       CURSOR TRAIL
+  ====================================================== -->
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+    <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+    <div class="site-background" aria-hidden="true">
+      <div class="background-grid"></div>
+      <div class="background-glow background-glow-one"></div>
+      <div class="background-glow background-glow-two"></div>
+    </div>
+
+    <!-- =====================================================
+       HEADER
+  ====================================================== -->
     <header class="site-header" id="siteHeader">
       <div class="header-inner">
-        <a href="#top" class="brand">
-          <span class="brand-mark">F</span>
+        <a href="#top" class="brand" aria-label="FAYAD - Home">
+          <span class="brand-mark">
+            <img src="icons/favicon.svg" alt="" />
+          </span>
 
           <span class="brand-text">
             <strong>FAYAD</strong>
@@ -67,70 +105,138 @@
           </span>
         </a>
 
-        <nav class="main-nav">
-          <a href="#about" class="nav-link active">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-          <a href="#contact" class="nav-link">Contact</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about" class="nav-link active" data-section="about">
+            <span>01</span>
+            About
+          </a>
+
+          <a href="#skills" class="nav-link" data-section="skills">
+            <span>02</span>
+            Skills
+          </a>
+
+          <a href="#projects" class="nav-link" data-section="projects">
+            <span>03</span>
+            Projects
+          </a>
+
+          <a href="gallery.html" class="nav-link">
+            <span>04</span>
+            Gallery
+          </a>
+
+          <a href="#contact" class="nav-link" data-section="contact">
+            <span>05</span>
+            Contact
+          </a>
         </nav>
 
         <a href="https://wa.me/201091573063" target="_blank" rel="noopener noreferrer" class="header-contact">
           <span>Let's talk</span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-head">
+          <span>MENU</span>
+          <span>FAYAD / 2026</span>
+        </div>
+
+        <a href="#about" data-section="about">
+          <span>About</span>
+          <small>01</small>
+        </a>
+
+        <a href="#skills" data-section="skills">
+          <span>Skills</span>
+          <small>02</small>
+        </a>
+
+        <a href="#projects" data-section="projects">
+          <span>Projects</span>
+          <small>03</small>
+        </a>
+
+        <a href="gallery.html">
+          <span>Gallery</span>
+          <small>04</small>
+        </a>
+
+        <a href="#contact" data-section="contact">
+          <span>Contact</span>
+          <small>05</small>
+        </a>
       </div>
     </header>
 
+    <!-- =====================================================
+       MAIN
+  ====================================================== -->
     <main id="top">
-      <!-- ================= HERO ================= -->
-
+      <!-- =====================================================
+         HERO
+    ====================================================== -->
       <section class="hero section" id="about">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="availability reveal">
-              <span class="availability-dot"></span>
-              AVAILABLE FOR FRONT-END PROJECTS
+          <div class="hero-content">
+            <div class="eyebrow reveal">
+              <span class="eyebrow-dot"></span>
+              FRONT-END DEVELOPER
             </div>
 
-            <div class="hero-eyebrow reveal">
+            <div class="hero-index reveal">
               <span>01</span>
-              <span>PERSONAL PORTFOLIO</span>
+              <span class="hero-index-line"></span>
+              <span>PORTFOLIO / 2026</span>
             </div>
 
             <h1 class="hero-title reveal">
-              عبد الحميد
-              <span>فياض</span>
+              <span class="hero-title-small">عبد الحميد</span>
+
+              <span class="hero-name">فياض</span>
+
+              <span class="hero-name-accent">.</span>
             </h1>
 
             <div class="hero-role reveal">
-              <span class="role-accent"></span>
-              <span id="typingRole">Front-End Developer</span>
+              <span>I BUILD</span>
+              <span class="role-divider"></span>
+              <strong id="typingRole">Front-End Experiences</strong>
             </div>
 
             <p class="hero-description reveal">
-              أبني واجهات ويب حديثة وسريعة، تجمع بين
-              <strong>التصميم البصري</strong>
-              وتجربة المستخدم والكود المنظم. أدرس هندسة الحاسبات وأحوّل الأفكار إلى منتجات رقمية عملية وقابلة للاستخدام.
+              أبني واجهات ويب واضحة ومتجاوبة، وأهتم بأن يكون الكود والتصميم والتفاعل جزءًا من تجربة واحدة.
             </p>
 
             <div class="hero-actions reveal">
-              <a href="#projects" class="button button-primary">
-                <span>View my work</span>
-                <i class="fa-solid fa-arrow-down"></i>
+              <a href="#projects" class="button button-primary" data-section="projects">
+                <span>مشاهدة المشاريع</span>
+                <i class="fa-solid fa-arrow-left"></i>
               </a>
 
-              <a href="#contact" class="button button-secondary">
-                <span>Contact me</span>
+              <a href="#contact" class="button button-secondary" data-section="contact">
+                <span>تواصل</span>
                 <i class="fa-regular fa-paper-plane"></i>
               </a>
             </div>
 
-            <div class="hero-stack reveal">
+            <div class="hero-tech reveal">
               <span>HTML5</span>
               <span>CSS3</span>
               <span>JavaScript</span>
-              <span>React</span>
               <span>Git</span>
               <span>PWA</span>
             </div>
@@ -139,351 +245,352 @@
           <!-- HERO VISUAL -->
 
           <div class="hero-visual reveal">
-            <div class="hero-orbit"></div>
+            <div class="visual-label">
+              <span>FAYAD</span>
+              <span>01</span>
+            </div>
 
             <div class="profile-card">
               <div class="profile-card-top">
-                <span>FAYAD / 2026</span>
+                <span>ABDULLHAMID FAYAD</span>
 
-                <span class="profile-live">
-                  <span></span>
-                  ONLINE
+                <span class="online-status">
+                  <i></i>
+                  AVAILABLE
                 </span>
               </div>
 
-              <div class="profile-image-container">
-                <img src="profile.jpg" alt="Abdullhamid Fayad" class="profile-image" />
+              <div class="profile-image-wrap">
+                <img
+                  src="profile.jpg"
+                  alt="Abdullhamid Fayad"
+                  class="profile-image"
+                  loading="eager"
+                  fetchpriority="high" />
 
                 <div class="profile-overlay"></div>
 
-                <div class="profile-name">
-                  <small>ABDULLHAMID</small>
+                <div class="profile-caption">
+                  <span>FRONT-END</span>
                   <strong>FAYAD</strong>
-                </div>
-
-                <div class="profile-code">
-                  <span>&lt;/&gt;</span>
-                  FRONT-END
                 </div>
               </div>
 
               <div class="profile-card-bottom">
                 <div>
                   <small>FOCUS</small>
-                  <strong>Web Interfaces</strong>
+                  <strong>Web Development</strong>
                 </div>
 
                 <div>
-                  <small>STATUS</small>
-                  <strong>Building</strong>
+                  <small>BASED IN</small>
+                  <strong>Egypt</strong>
                 </div>
               </div>
             </div>
 
-            <div class="floating-code-card">
+            <!-- Purposeful side rail -->
+            <div class="hero-note">
+              <span>DESIGN</span>
+              <i>×</i>
+              <span>CODE</span>
+              <i>×</i>
+              <span>EXPERIENCE</span>
+            </div>
+
+            <div class="hero-code-card">
               <div class="code-header">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <small>developer.js</small>
               </div>
 
-              <code>
-                <span class="code-purple">const</span>
-                <span class="code-white">developer</span>
-                <span class="code-blue">=</span>
-                <span class="code-green">"FAYAD"</span>
-              </code>
+              <div class="code-body">
+                <p>
+                  <span class="code-keyword">const</span>
+                  <span class="code-name">focus</span>
+                  <span class="code-symbol">=</span>
+                </p>
 
-              <code>
-                <span class="code-purple">build</span>
-                <span class="code-white">({</span>
-                <span class="code-yellow">UI</span>
-                <span class="code-white">:</span>
-                <span class="code-green">true</span>
-                <span class="code-white">})</span>
-              </code>
-            </div>
+                <p class="code-indent">
+                  <span>{</span>
+                </p>
 
-            <div class="experience-badge">
-              <strong>01+</strong>
+                <p class="code-indent-two">
+                  interface:
+                  <strong>"Responsive"</strong>
+                </p>
 
-              <span>
-                YEARS<br />
-                BUILDING
-              </span>
+                <p class="code-indent-two">
+                  approach:
+                  <strong>"Learn & Build"</strong>
+                </p>
+
+                <p class="code-indent">
+                  <span>}</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- HERO STATS -->
-
-        <div class="container hero-stats">
+        <div class="container hero-bottom">
           <div class="hero-stat reveal">
-            <span class="stat-number">03</span>
-            <span class="stat-label">Main Projects</span>
+            <strong>03</strong>
+            <span>Selected Projects</span>
           </div>
 
           <div class="hero-stat reveal">
-            <span class="stat-number">54+</span>
-            <span class="stat-label">Visual Works</span>
+            <strong>54+</strong>
+            <span>Visual Works</span>
           </div>
 
           <div class="hero-stat reveal">
-            <span class="stat-number">3.71</span>
-            <span class="stat-label">Academic GPA</span>
-          </div>
-
-          <div class="hero-stat reveal">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Front-End Focus</span>
+            <strong>100%</strong>
+            <span>Front-End Focus</span>
           </div>
         </div>
       </section>
 
-      <!-- ================= INTRO ================= -->
-
-      <section class="statement-section">
+      <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+      <section class="about-section section">
         <div class="container">
-          <div class="statement-layout">
-            <div class="section-label">
-              <span>01</span>
-              ABOUT / IDENTITY
+          <div class="about-layout">
+            <div class="section-marker reveal">
+              <span>02</span>
+              <small>ABOUT</small>
             </div>
 
-            <div class="statement-content">
-              <h2>
-                I build digital experiences that feel
-                <span>clear, modern</span>
-                and intentionally designed.
+            <div class="about-content">
+              <span class="section-index reveal">ABOUT / APPROACH</span>
+
+              <h2 class="reveal">
+                الواجهة الجيدة لا تبدأ بالكود، بل بطريقة
+                <span>التفكير.</span>
               </h2>
 
-              <p>
-                بالنسبة لي الـ Front-End مش مجرد كتابة HTML وCSS. هو تحويل الفكرة إلى تجربة حقيقية، من أول layout وحتى
-                آخر interaction.
-              </p>
+              <div class="about-copy reveal">
+                <p>
+                  أتعلم تطوير الويب من خلال بناء مشاريع فعلية، مع اهتمام خاص بالـResponsive Design وتنظيم الواجهة
+                  والتفاصيل البصرية.
+                </p>
+
+                <p>هدفي أن تكون النتيجة بسيطة في الاستخدام، قوية بصريًا، ومبنية بطريقة يمكن تطويرها لاحقًا.</p>
+              </div>
+
+              <div class="about-meta reveal">
+                <span>LEARN</span>
+                <span>BUILD</span>
+                <span>REFINE</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= SKILLS ================= -->
-
-      <section class="section skills-section" id="skills">
+      <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+      <section class="skills-section section" id="skills">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <div>
-              <span class="section-index">02 / SKILLS</span>
-
-              <h2>What I work with</h2>
+              <span class="section-index">03 / SKILLS</span>
+              <h2>Core toolkit</h2>
             </div>
 
-            <p>التقنيات والأدوات التي أستخدمها لبناء واجهات ويب حديثة ومتجاوبة.</p>
+            <p>الأدوات التي أستخدمها حاليًا لبناء واجهات الويب.</p>
           </div>
 
-          <div class="skills-bento">
-            <!-- Main -->
-
-            <article class="skill-main-card reveal">
-              <div class="card-top">
-                <span class="card-number">01</span>
-
+          <div class="skills-grid">
+            <article class="skill-card skill-feature reveal">
+              <div class="skill-card-top">
+                <span>01</span>
                 <i class="fa-solid fa-code"></i>
               </div>
 
-              <div class="skill-icon-large">&lt;/&gt;</div>
+              <div class="skill-card-main">
+                <span class="skill-kicker">CORE</span>
 
-              <h3>Front-End Development</h3>
+                <h3>
+                  Front-End
+                  <span>Development</span>
+                </h3>
 
-              <p>بناء واجهات Responsive باستخدام HTML وCSS وJavaScript مع اهتمام بالتفاصيل، الـ UX والأداء.</p>
+                <p>بناء واجهات Responsive باستخدام HTML وCSS وJavaScript.</p>
+              </div>
 
               <div class="skill-tags">
                 <span>HTML5</span>
                 <span>CSS3</span>
-                <span>JavaScript ES6+</span>
-                <span>Responsive Design</span>
+                <span>JavaScript</span>
+                <span>Responsive</span>
               </div>
             </article>
 
-            <!-- JavaScript -->
+            <article class="skill-card reveal">
+              <div class="skill-card-top">
+                <span>02</span>
+                <div class="skill-letter">JS</div>
+              </div>
 
-            <article class="skill-small-card reveal">
-              <div class="small-card-icon js-icon">JS</div>
-
-              <span class="small-card-label">CORE TECHNOLOGY</span>
+              <span class="skill-kicker">INTERACTION</span>
 
               <h3>JavaScript</h3>
 
-              <p>Interactive interfaces, DOM manipulation and modern JS.</p>
+              <p>DOM، Events، Logic والتفاعل داخل صفحات الويب.</p>
 
-              <div class="mini-line"></div>
+              <div class="skill-line"></div>
             </article>
 
-            <!-- React -->
-
-            <article class="skill-small-card react-card reveal">
-              <div class="small-card-icon">
-                <i class="fa-brands fa-react"></i>
+            <article class="skill-card reveal">
+              <div class="skill-card-top">
+                <span>03</span>
+                <i class="fa-brands fa-git-alt"></i>
               </div>
 
-              <span class="small-card-label">MODERN UI</span>
+              <span class="skill-kicker">WORKFLOW</span>
 
-              <h3>React</h3>
+              <h3>Git & GitHub</h3>
 
-              <p>Component-based interfaces and modern frontend architecture.</p>
+              <p>تنظيم المشاريع وتتبع التعديلات وإدارة نسخ الكود.</p>
 
-              <div class="mini-line"></div>
+              <div class="skill-line"></div>
             </article>
 
-            <!-- Design -->
-
-            <article class="skill-wide-card reveal">
-              <div class="wide-card-content">
-                <span class="small-card-label">VISUAL DIRECTION</span>
+            <article class="skill-card skill-wide reveal">
+              <div class="skill-wide-content">
+                <span class="skill-kicker">04 / VISUAL THINKING</span>
 
                 <h3>
-                  UI / UX
+                  UI, Layout
                   <span>& Visual Design</span>
                 </h3>
 
-                <p>Typography، spacing، composition، visual hierarchy وmicro-interactions.</p>
+                <p>اهتمام بالـTypography والمساحات والتباين والـVisual Hierarchy لبناء واجهة متوازنة وواضحة.</p>
               </div>
 
-              <div class="design-orb">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </article>
-
-            <!-- Workflow -->
-
-            <article class="skill-tools-card reveal">
-              <div class="card-top">
-                <span class="card-number">05</span>
-                <i class="fa-solid fa-layer-group"></i>
-              </div>
-
-              <h3>Workflow</h3>
-
-              <div class="workflow-list">
-                <div>
-                  <span>01</span>
-                  Git / GitHub
-                </div>
-
-                <div>
-                  <span>02</span>
-                  VS Code
-                </div>
-
-                <div>
-                  <span>03</span>
-                  Vercel
-                </div>
-
-                <div>
-                  <span>04</span>
-                  PWA
-                </div>
+              <div class="visual-type-card">
+                <span>TYPE</span>
+                <strong>Aa</strong>
+                <small>LAYOUT</small>
               </div>
             </article>
 
-            <!-- Accessibility -->
-
-            <article class="skill-small-card accessibility-card reveal">
-              <div class="small-card-icon">
-                <i class="fa-solid fa-universal-access"></i>
+            <article class="skill-card reveal">
+              <div class="skill-card-top">
+                <span>05</span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
               </div>
 
-              <span class="small-card-label">QUALITY</span>
+              <span class="skill-kicker">EXPERIENCE</span>
+
+              <h3>Responsive UI</h3>
+
+              <p>واجهات تعمل بشكل مريح على الهاتف والتابلت والـDesktop.</p>
+
+              <div class="skill-line"></div>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-card-top">
+                <span>06</span>
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+
+              <span class="skill-kicker">QUALITY</span>
 
               <h3>Performance</h3>
 
-              <p>Responsive layouts, accessibility and optimized UX.</p>
+              <p>تقليل العناصر والتأثيرات غير الضرورية للحفاظ على تجربة خفيفة.</p>
+
+              <div class="skill-line"></div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ================= EDUCATION ================= -->
-
-      <section class="education-section">
+      <!-- =====================================================
+         EDUCATION
+    ====================================================== -->
+      <section class="education-section section">
         <div class="container">
           <div class="education-card reveal">
-            <div class="education-left">
-              <span class="section-index">03 / EDUCATION</span>
+            <div class="education-meta">
+              <span class="section-index">04 / EDUCATION</span>
 
               <div class="education-icon">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
-
-              <span class="education-date"> CURRENTLY STUDYING </span>
             </div>
 
             <div class="education-main">
-              <span class="education-university"> TANTA UNIVERSITY </span>
+              <span>TANTA UNIVERSITY</span>
 
               <h2>Faculty of Engineering</h2>
 
               <h3>Computer Engineering</h3>
 
-              <p>طالب هندسة حاسبات مهتم بتطوير الويب، تصميم المنتجات الرقمية وبناء تجارب Front-End حديثة.</p>
+              <p>هندسة الحاسبات — مع تركيز حالي على تطوير الويب والـFront-End.</p>
             </div>
 
-            <div class="education-score">
-              <span>PREPARATORY ENGINEERING</span>
+            <div class="education-focus">
+              <small>CURRENT FOCUS</small>
 
-              <strong>3.71</strong>
+              <strong>Front-End</strong>
 
-              <small>/ 4.0 GPA</small>
+              <span>Web Development</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= PROJECTS ================= -->
-
-      <section class="section projects-section" id="projects">
+      <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+      <section class="projects-section section" id="projects">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <div>
-              <span class="section-index">04 / SELECTED WORK</span>
-
+              <span class="section-index">05 / SELECTED WORK</span>
               <h2>Projects</h2>
             </div>
 
-            <p>مشاريع تمثل طريقة تفكيري في الـ Front-End والـ visual design.</p>
+            <p>مشاريع مبنية للتطبيق، التجربة، وتحويل الأفكار إلى واجهات حقيقية.</p>
           </div>
 
           <!-- FEATURED -->
 
           <article class="featured-project reveal">
-            <div class="featured-header">
+            <div class="featured-top">
               <div>
-                <span class="featured-label"> FEATURED PROJECT </span>
+                <span class="project-index"> FEATURED / 01 </span>
 
                 <h3>
                   FAYAD
-                  <span>Learning</span>
+                  <strong>Learning</strong>
                 </h3>
               </div>
 
-              <span class="featured-year"> 2026 </span>
+              <span class="project-year">2026</span>
             </div>
 
             <div class="featured-body">
-              <!-- Visual -->
-
               <a
                 href="https://fayad-learning.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="learning-device">
-                <div class="device-glow"></div>
-
+                class="learning-preview"
+                aria-label="Open FAYAD Learning">
                 <div class="browser-window">
-                  <div class="browser-top">
-                    <div class="browser-controls">
+                  <div class="browser-bar">
+                    <div class="browser-dots">
                       <span></span>
                       <span></span>
                       <span></span>
@@ -495,116 +602,112 @@
                     </div>
                   </div>
 
-                  <div class="learning-interface">
+                  <div class="learning-screen">
                     <aside class="learning-sidebar">
                       <div class="learning-logo">F</div>
 
-                      <div class="side-item active">
+                      <span class="learning-side active">
                         <i class="fa-solid fa-house"></i>
-                      </div>
+                      </span>
 
-                      <div class="side-item">
-                        <i class="fa-solid fa-book"></i>
-                      </div>
+                      <span class="learning-side">
+                        <i class="fa-solid fa-book-open"></i>
+                      </span>
 
-                      <div class="side-item">
+                      <span class="learning-side">
                         <i class="fa-solid fa-code"></i>
-                      </div>
+                      </span>
 
-                      <div class="side-item">
+                      <span class="learning-side">
                         <i class="fa-solid fa-circle-question"></i>
-                      </div>
-
-                      <div class="side-item">
-                        <i class="fa-solid fa-chart-line"></i>
-                      </div>
+                      </span>
                     </aside>
 
                     <div class="learning-content">
                       <div class="learning-nav">
-                        <span> LEARN </span>
-
-                        <span> PRACTICE </span>
-
-                        <span> PLAYGROUND </span>
-
-                        <span> QUIZ </span>
+                        <span>LEARN</span>
+                        <span>PRACTICE</span>
+                        <span>PLAYGROUND</span>
+                        <span>QUIZ</span>
                       </div>
 
-                      <div class="learning-hero">
-                        <small> WELCOME TO </small>
+                      <div class="learning-welcome">
+                        <small>WELCOME TO</small>
 
-                        <strong> FAYAD </strong>
+                        <h4>
+                          FAYAD
+                          <span>Learning</span>
+                        </h4>
 
-                        <em> Learning Platform </em>
+                        <p>Learn. Practice. Build.</p>
                       </div>
 
-                      <div class="learning-cards">
-                        <div class="learning-card html-card">
-                          <span>01</span>
+                      <div class="learning-mini-cards">
+                        <div>
+                          <small>01</small>
                           <strong>HTML</strong>
-                          <small>Structure</small>
+                          <span>Structure</span>
                         </div>
 
-                        <div class="learning-card css-card">
-                          <span>02</span>
+                        <div>
+                          <small>02</small>
                           <strong>CSS</strong>
-                          <small>Styling</small>
+                          <span>Styling</span>
                         </div>
 
-                        <div class="learning-card js-card">
-                          <span>03</span>
+                        <div>
+                          <small>03</small>
                           <strong>JS</strong>
-                          <small>Logic</small>
+                          <span>Logic</span>
                         </div>
                       </div>
 
                       <div class="learning-progress">
-                        <span> YOUR PROGRESS </span>
-
                         <div>
-                          <i></i>
+                          <span>LEARNING PROGRESS</span>
+                          <strong>72%</strong>
                         </div>
+
+                        <span class="progress-track">
+                          <span></span>
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="project-open-button">
+                <span class="preview-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
+                </span>
               </a>
 
-              <!-- Info -->
-
               <div class="featured-info">
-                <div class="project-index">01</div>
+                <span class="project-kicker"> INTERACTIVE LEARNING PLATFORM </span>
 
-                <p>
-                  منصة تعليمية تفاعلية لتعلم Web Development. صممت وطورت التجربة بالكامل كمنتج Front-End مع دروس،
-                  تدريبات، Quiz، Progress وتجربة ثنائية اللغة.
+                <p class="project-description">
+                  منصة تعليمية تفاعلية تجمع بين التعلم والممارسة والاختبارات والتجربة العملية.
                 </p>
 
-                <div class="featured-features">
-                  <div>
+                <div class="project-features">
+                  <span>
                     <i class="fa-solid fa-check"></i>
-                    Interactive Learning
-                  </div>
+                    Interactive lessons
+                  </span>
 
-                  <div>
+                  <span>
                     <i class="fa-solid fa-check"></i>
-                    Bilingual UI
-                  </div>
+                    Practice & quizzes
+                  </span>
 
-                  <div>
+                  <span>
                     <i class="fa-solid fa-check"></i>
-                    Progress System
-                  </div>
+                    Bilingual interface
+                  </span>
 
-                  <div>
+                  <span>
                     <i class="fa-solid fa-check"></i>
-                    PWA Ready
-                  </div>
+                    PWA experience
+                  </span>
                 </div>
 
                 <div class="project-tags">
@@ -620,7 +723,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="project-link">
-                  Open project
+                  <span>Visit project</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -629,225 +732,305 @@
 
           <!-- OTHER PROJECTS -->
 
-          <div class="other-projects">
+          <div class="projects-grid">
             <a
               href="https://elomda-fayad-trucks.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-card reveal">
-              <div class="project-visual truck-visual-one">
-                <div class="truck-ui">
-                  <span class="truck-brand"> ELOMDA </span>
+              class="project-card project-elomda reveal">
+              <div class="project-visual">
+                <span class="project-number">02</span>
 
-                  <strong> TRUCKS </strong>
-
-                  <small> HEAVY DUTY </small>
+                <div class="project-orb">
+                  <div class="truck-brand">
+                    <span>ELOMDA</span>
+                    <strong>TRUCKS</strong>
+                  </div>
                 </div>
 
-                <div class="truck-lines"></div>
+                <span class="project-visual-label"> INDUSTRIAL / PRODUCT </span>
               </div>
 
-              <div class="project-card-info">
-                <div class="project-card-number">02</div>
-
+              <div class="project-card-content">
                 <div>
+                  <span class="project-kicker"> PRODUCT WEBSITE </span>
+
                   <h3>Elomda Fayad Trucks</h3>
 
-                  <p>Product-focused Front-End experience with responsive layouts and visual presentation.</p>
+                  <p>واجهة تجارية بهوية قوية وتركيز على عرض المنتجات بوضوح.</p>
                 </div>
 
-                <div class="project-card-arrow">
+                <span class="project-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
+                </span>
               </div>
 
-              <div class="project-tech">HTML / CSS / JavaScript</div>
+              <div class="project-footer">HTML / CSS / JavaScript</div>
             </a>
 
             <a
               href="https://fayad-trucks.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-card reveal">
-              <div class="project-visual truck-visual-two">
-                <div class="truck-ui">
-                  <span class="truck-brand"> FAYAD </span>
+              class="project-card project-fayad-trucks reveal">
+              <div class="project-visual">
+                <span class="project-number">03</span>
 
-                  <strong> TRUCKS </strong>
-
-                  <small> PRODUCT EXPERIENCE </small>
+                <div class="project-orb">
+                  <div class="truck-brand">
+                    <span>FAYAD</span>
+                    <strong>TRUCKS</strong>
+                  </div>
                 </div>
 
-                <div class="truck-lines"></div>
+                <span class="project-visual-label"> RESPONSIVE / UI </span>
               </div>
 
-              <div class="project-card-info">
-                <div class="project-card-number">03</div>
-
+              <div class="project-card-content">
                 <div>
+                  <span class="project-kicker"> RESPONSIVE UI </span>
+
                   <h3>FAYAD Trucks</h3>
 
-                  <p>Responsive product presentation built around a clean visual structure.</p>
+                  <p>تجربة مباشرة لعرض المنتجات مع اهتمام بترتيب المحتوى وسهولة التصفح.</p>
                 </div>
 
-                <div class="project-card-arrow">
+                <span class="project-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
+                </span>
               </div>
 
-              <div class="project-tech">HTML / CSS / JavaScript</div>
+              <div class="project-footer">HTML / CSS / JavaScript</div>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- ================= VISUAL WORK ================= -->
-
-      <section class="visual-section">
+      <!-- =====================================================
+         VISUAL WORK
+    ====================================================== -->
+      <section class="visual-section section">
         <div class="container">
-          <div class="visual-header">
+          <div class="visual-heading reveal">
             <div>
-              <span class="section-index">05 / VISUAL WORK</span>
+              <span class="section-index">06 / VISUAL WORK</span>
 
               <h2>
                 Beyond
                 <span>code.</span>
               </h2>
 
-              <p>
-                إلى جانب تطوير الويب، لدي اهتمام بالتصوير وصناعة المحتوى البصري، وهو ما ينعكس على طريقة اهتمامي بالـ
-                composition والـ visual details.
-              </p>
+              <p>جانب بصري يضيف حسًا بالتكوين، الألوان، والمساحات إلى طريقة بناء الواجهات.</p>
 
-              <a href="gallery.html" class="visual-link">
-                Explore full gallery
+              <a href="gallery.html" class="gallery-link">
+                Explore the gallery
                 <i class="fa-solid fa-arrow-left"></i>
               </a>
             </div>
 
-            <div class="visual-counter">
+            <div class="visual-count">
               <strong>54+</strong>
               <span>VISUAL<br />WORKS</span>
             </div>
           </div>
 
-          <div class="visual-gallery-preview">
-            <a href="gallery.html" class="gallery-image image-large">
-              <img src="assets/images/photo1.jpg" alt="Visual work 01" />
+          <div class="visual-gallery">
+            <a href="gallery.html" class="gallery-image gallery-large reveal">
+              <img src="assets/images/photo1.jpg" alt="Visual work 01" loading="lazy" />
               <span>01</span>
             </a>
 
-            <a href="gallery.html" class="gallery-image image-small">
-              <img src="assets/images/photo2.jpg" alt="Visual work 02" />
+            <a href="gallery.html" class="gallery-image reveal">
+              <img src="assets/images/photo2.jpg" alt="Visual work 02" loading="lazy" />
               <span>02</span>
             </a>
 
-            <a href="gallery.html" class="gallery-image image-small">
-              <img src="assets/images/photo3.jpg" alt="Visual work 03" />
+            <a href="gallery.html" class="gallery-image reveal">
+              <img src="assets/images/photo3.jpg" alt="Visual work 03" loading="lazy" />
               <span>03</span>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- ================= CONTACT ================= -->
-
-      <section class="section contact-section" id="contact">
+      <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+      <section class="contact-section section" id="contact">
         <div class="container">
-          <div class="contact-panel reveal">
-            <div class="contact-glow"></div>
-
-            <div class="contact-copy">
-              <span class="section-index"> 06 / CONTACT </span>
+          <div class="contact-intro reveal">
+            <div>
+              <span class="section-index">07 / CONTACT</span>
 
               <h2>
-                Have a project
-                <span>in mind?</span>
+                Have a project?
+                <span>Let's talk.</span>
               </h2>
-
-              <p>Let's build something useful, modern and memorable together.</p>
             </div>
 
-            <a href="https://wa.me/201091573063" target="_blank" rel="noopener noreferrer" class="contact-main-button">
-              <span>Start a conversation</span>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
+            <p>مشروع، فكرة، أو تعاون؟ اختر الطريقة المناسبة للتواصل.</p>
           </div>
 
           <div class="contact-grid">
-            <a href="https://github.com/midofayad22" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <span>GitHub</span>
-              <i class="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/midofayad22"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card github">
+              <span class="contact-icon">
+                <i class="fa-brands fa-github"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>CODE</small>
+                <strong>GitHub</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
             </a>
 
             <a
               href="https://www.linkedin.com/in/abdullhamid-f-800bb5379"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link">
-              <span>LinkedIn</span>
-              <i class="fa-brands fa-linkedin-in"></i>
+              class="contact-card linkedin">
+              <span class="contact-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>PROFESSIONAL</small>
+                <strong>LinkedIn</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
             </a>
 
             <a
               href="https://www.instagram.com/abdullhamid_fayad22"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link">
-              <span>Instagram</span>
-              <i class="fa-brands fa-instagram"></i>
+              class="contact-card instagram">
+              <span class="contact-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>VISUAL</small>
+                <strong>Instagram</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
             </a>
 
             <a
               href="https://youtube.com/@abdullhamid-mido22"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link">
-              <span>YouTube</span>
-              <i class="fa-brands fa-youtube"></i>
+              class="contact-card youtube">
+              <span class="contact-icon">
+                <i class="fa-brands fa-youtube"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>CONTENT</small>
+                <strong>YouTube</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
             </a>
 
             <a
               href="https://www.tiktok.com/@abdullhamid_fayad"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link">
-              <span>TikTok</span>
-              <i class="fa-brands fa-tiktok"></i>
+              class="contact-card tiktok">
+              <span class="contact-icon">
+                <i class="fa-brands fa-tiktok"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>SHORT FORM</small>
+                <strong>TikTok</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
             </a>
 
             <a
               href="https://wa.me/201091573063"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link whatsapp">
-              <span>WhatsApp</span>
-              <i class="fa-brands fa-whatsapp"></i>
+              class="contact-card whatsapp">
+              <span class="contact-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </span>
+
+              <span class="contact-text">
+                <small>DIRECT</small>
+                <strong>WhatsApp</strong>
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+            </a>
+          </div>
+
+          <div class="contact-bottom reveal">
+            <span>Prefer WhatsApp?</span>
+
+            <a href="https://wa.me/201091573063" target="_blank" rel="noopener noreferrer">
+              Start a conversation
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ================= FOOTER ================= -->
-
+    <!-- =====================================================
+       FOOTER
+  ====================================================== -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div class="footer-brand">
-          <span class="brand-mark">F</span>
+        <a href="#top" class="footer-brand" aria-label="Back to top">
+          <span class="footer-mark">
+            <img src="icons/favicon.svg" alt="" />
+          </span>
 
-          <div>
-            <strong>Abdullhamid Fayad</strong>
-            <small>Front-End Developer</small>
-          </div>
+          <span>
+            <strong>FAYAD</strong>
+            <small>ABDULLHAMID FAYAD</small>
+          </span>
+        </a>
+
+        <div class="footer-center">
+          <span>Front-End Developer</span>
+          <i></i>
+          <span>Computer Engineering Student</span>
         </div>
 
-        <p>Designed & built with intention.</p>
+        <div class="footer-right">
+          <span>© 2026 FAYAD</span>
 
-        <span class="copyright"> © 2026 FAYAD </span>
+          <a href="#top">
+            Back to top
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
       </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Service Worker — بدون تغيير -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch((error) => {
+            console.warn("PWA registration failed:", error);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
