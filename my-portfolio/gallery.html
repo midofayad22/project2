@@ -1,265 +1,791 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عبد الحميد فياض | المعرض البصري والمرئي</title>
-  <style>
-    /* --------------------------------------------------
-       1. المتغيرات والألوان الذهبية
-    -------------------------------------------------- */
-    :root {
-      --primary-color: #1a1a1a;
-      --gold-primary: #d4af37;
-      --gold-hover: #c5a028;
-      --gold-shadow: rgba(212, 175, 55, 0.35);
-      
-      --bg-color: #f8f9fa;
-      --card-bg: #ffffff;
-      --text-main: #212529;
-      --text-muted: #6c757d;
-    }
+  <head>
+    <meta charset="UTF-8" />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      direction: rtl;
-      padding-bottom: 60px;
-    }
+    <meta name="theme-color" content="#071A18" />
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    <meta name="description" content="Abdullhamid Fayad — Visual Gallery." />
 
-    /* --------------------------------------------------
-       2. الهيدر وزرار العودة الذهبي
-    -------------------------------------------------- */
-    header {
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 30px 0;
-      margin-bottom: 30px;
-    }
+    <title>Gallery — Abdullhamid Fayad</title>
 
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
+    <link rel="manifest" href="/manifest.json" />
 
-    /* زرار العودة الذهبي المطور مع الأنميشن الناعم */
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: #ffffff;
-      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-      padding: 12px 26px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      box-shadow: 0 4px 15px var(--gold-shadow);
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
 
-    .back-btn:hover {
-      background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5);
-      color: #ffffff;
-    }
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
 
-    .back-btn:active {
-      transform: translateY(-1px) scale(0.98);
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    .back-btn span {
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    .back-btn:hover span {
-      transform: translateX(5px);
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet" />
 
-    h1 {
-      font-size: 2.2rem;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
+    <style>
+      :root {
+        --bg: #07110f;
+        --surface: #0d1b18;
+        --surface2: #10231f;
+        --border: rgba(123, 179, 168, 0.14);
 
-    /* --------------------------------------------------
-       3. شبكة الصور (Gallery Grid)
-    -------------------------------------------------- */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .gallery-card {
-      background: var(--card-bg);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      
-      opacity: 0;
-      transform: translateY(25px);
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .card-image-wrapper {
-      position: relative;
-      width: 100%;
-      height: 260px;
-      overflow: hidden;
-      background-color: #e9ecef;
-    }
-
-    .card-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-card:hover .card-image-wrapper img {
-      transform: scale(1.08);
-    }
-
-    /* الأوفرلاي وتأثير الـ Hover */
-    .card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2), transparent);
-      color: #ffffff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      opacity: 0;
-      transform: translateY(15px);
-      transition: all 0.35s ease;
-    }
-
-    .gallery-card:hover .card-overlay {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card-overlay h3 {
-      font-size: 1.15rem;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-
-    .card-overlay span {
-      font-size: 0.85rem;
-      color: #d4af37;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+        --text: #f1f6f4;
+        --muted: #9baaa6;
+        --teal: #2dd4bf;
+        --gold: #c8a85b;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- الهيدر والزرار الذهبي -->
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="back-btn">
-        <span>→</span> العودة للرئيسية
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background: var(--bg);
+      }
+
+      body {
+        min-height: 100vh;
+
+        background: radial-gradient(circle at 75% 0%, rgba(45, 212, 191, 0.08), transparent 30%), var(--bg);
+
+        color: var(--text);
+
+        font-family: "Inter", "Tajawal", sans-serif;
+
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 9px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #06100e;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #173d37;
+        border-radius: 20px;
+      }
+
+      .gallery-header {
+        width: min(calc(100% - 40px), 1200px);
+
+        margin: auto;
+
+        padding: 30px 0;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gallery-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+
+        display: grid;
+        place-items: center;
+
+        border: 1px solid rgba(45, 212, 191, 0.3);
+
+        border-radius: 12px;
+
+        color: var(--teal);
+
+        background: rgba(45, 212, 191, 0.07);
+
+        font-weight: 900;
+      }
+
+      .gallery-brand div {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .gallery-brand strong {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+
+      .gallery-brand small {
+        margin-top: 3px;
+
+        color: #62736e;
+
+        font-size: 7px;
+        letter-spacing: 0.13em;
+      }
+
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        padding: 10px 14px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 11px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+        font-weight: 700;
+
+        transition: 0.25s ease;
+      }
+
+      .back-link:hover {
+        color: var(--teal);
+
+        border-color: rgba(45, 212, 191, 0.25);
+
+        background: rgba(45, 212, 191, 0.05);
+      }
+
+      .gallery-hero {
+        width: min(calc(100% - 40px), 1200px);
+
+        margin: 80px auto 55px;
+      }
+
+      .section-index {
+        color: var(--teal);
+
+        font-size: 9px;
+        font-weight: 800;
+
+        letter-spacing: 0.15em;
+      }
+
+      .gallery-hero h1 {
+        margin-top: 13px;
+
+        font-size: clamp(50px, 8vw, 100px);
+
+        line-height: 0.9;
+
+        letter-spacing: -0.055em;
+      }
+
+      .gallery-hero h1 span {
+        color: var(--teal);
+      }
+
+      .gallery-hero p {
+        max-width: 620px;
+
+        margin-top: 25px;
+
+        color: var(--muted);
+
+        font-family: "Tajawal", sans-serif;
+
+        font-size: 14px;
+
+        line-height: 2;
+      }
+
+      .gallery-count {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        margin-top: 22px;
+
+        color: #647772;
+
+        font-size: 9px;
+        font-weight: 800;
+      }
+
+      .gallery-count strong {
+        color: var(--gold);
+
+        font-size: 20px;
+      }
+
+      .gallery-grid {
+        width: min(calc(100% - 40px), 1200px);
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-auto-rows: 260px;
+
+        gap: 12px;
+
+        padding-bottom: 100px;
+      }
+
+      .gallery-item {
+        position: relative;
+
+        overflow: hidden;
+
+        border: 1px solid var(--border);
+
+        border-radius: 17px;
+
+        background: var(--surface);
+
+        cursor: pointer;
+      }
+
+      .gallery-item:nth-child(5n) {
+        grid-row: span 2;
+      }
+
+      .gallery-item:nth-child(8n) {
+        grid-column: span 2;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition:
+          transform 0.7s ease,
+          filter 0.5s ease;
+      }
+
+      .gallery-item::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: linear-gradient(180deg, transparent 50%, rgba(3, 12, 10, 0.7));
+
+        pointer-events: none;
+      }
+
+      .gallery-number {
+        position: absolute;
+
+        z-index: 2;
+
+        bottom: 13px;
+        left: 15px;
+
+        color: white;
+
+        font-size: 9px;
+        font-weight: 800;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.07);
+
+        filter: saturate(1.1);
+      }
+
+      .modal {
+        position: fixed;
+
+        z-index: 500;
+
+        inset: 0;
+
+        display: none;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 25px;
+
+        background: rgba(2, 8, 7, 0.92);
+
+        backdrop-filter: blur(15px);
+      }
+
+      .modal.open {
+        display: flex;
+      }
+
+      .modal-image {
+        max-width: min(1100px, 94vw);
+
+        max-height: 88vh;
+
+        object-fit: contain;
+
+        border-radius: 14px;
+
+        box-shadow: 0 30px 100px rgba(0, 0, 0, 0.65);
+      }
+
+      .modal-close {
+        position: absolute;
+
+        top: 22px;
+        left: 22px;
+
+        width: 43px;
+        height: 43px;
+
+        display: grid;
+        place-items: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: 50%;
+
+        background: #0d1b18;
+
+        color: white;
+
+        cursor: pointer;
+
+        font-size: 15px;
+      }
+
+      @media (max-width: 900px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 650px) {
+        .gallery-header {
+          width: min(calc(100% - 28px), 1200px);
+        }
+
+        .gallery-hero {
+          width: min(calc(100% - 28px), 1200px);
+
+          margin-top: 55px;
+        }
+
+        .gallery-grid {
+          width: min(calc(100% - 28px), 1200px);
+
+          grid-template-columns: repeat(2, 1fr);
+
+          grid-auto-rows: 210px;
+
+          gap: 8px;
+        }
+
+        .gallery-item:nth-child(5n) {
+          grid-row: span 1;
+        }
+
+        .gallery-item:nth-child(8n) {
+          grid-column: span 1;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="gallery-header">
+      <a href="index.html" class="gallery-brand">
+        <span class="brand-mark">F</span>
+
+        <div>
+          <strong>FAYAD</strong>
+          <small>VISUAL WORKS</small>
+        </div>
       </a>
-      <h1>المعرض البصري والمرئي</h1>
-      <p class="subtitle">36 عمل فوتوغرافي مميز</p>
+
+      <a href="index.html" class="back-link">
+        Back to portfolio
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </header>
+
+    <main>
+      <section class="gallery-hero">
+        <span class="section-index"> 05 / VISUAL WORK </span>
+
+        <h1>
+          Visual
+          <span>Gallery.</span>
+        </h1>
+
+        <p>مجموعة من الأعمال والصور التي تعكس اهتمامي بالتصوير، composition والتفاصيل البصرية.</p>
+
+        <div class="gallery-count">
+          <strong>54</strong>
+          VISUAL WORKS
+        </div>
+      </section>
+
+      <section class="gallery-grid" id="galleryGrid">
+        <!-- 01 - 54 -->
+
+        <a class="gallery-item">
+          <img src="assets/images/photo1.jpg" alt="Visual work 01" loading="lazy" />
+          <span class="gallery-number">01</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo2.jpg" alt="Visual work 02" loading="lazy" />
+          <span class="gallery-number">02</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo3.jpg" alt="Visual work 03" loading="lazy" />
+          <span class="gallery-number">03</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo4.jpg" alt="Visual work 04" loading="lazy" />
+          <span class="gallery-number">04</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo5.jpg" alt="Visual work 05" loading="lazy" />
+          <span class="gallery-number">05</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo6.jpg" alt="Visual work 06" loading="lazy" />
+          <span class="gallery-number">06</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo7.jpg" alt="Visual work 07" loading="lazy" />
+          <span class="gallery-number">07</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo8.jpg" alt="Visual work 08" loading="lazy" />
+          <span class="gallery-number">08</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo9.jpg" alt="Visual work 09" loading="lazy" />
+          <span class="gallery-number">09</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo10.jpg" alt="Visual work 10" loading="lazy" />
+          <span class="gallery-number">10</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo11.jpg" alt="Visual work 11" loading="lazy" />
+          <span class="gallery-number">11</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo12.jpg" alt="Visual work 12" loading="lazy" />
+          <span class="gallery-number">12</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo13.jpg" alt="Visual work 13" loading="lazy" />
+          <span class="gallery-number">13</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo14.jpg" alt="Visual work 14" loading="lazy" />
+          <span class="gallery-number">14</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo15.jpg" alt="Visual work 15" loading="lazy" />
+          <span class="gallery-number">15</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo16.jpg" alt="Visual work 16" loading="lazy" />
+          <span class="gallery-number">16</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo17.jpg" alt="Visual work 17" loading="lazy" />
+          <span class="gallery-number">17</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo18.jpg" alt="Visual work 18" loading="lazy" />
+          <span class="gallery-number">18</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo19.jpg" alt="Visual work 19" loading="lazy" />
+          <span class="gallery-number">19</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo20.jpg" alt="Visual work 20" loading="lazy" />
+          <span class="gallery-number">20</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo21.jpg" alt="Visual work 21" loading="lazy" />
+          <span class="gallery-number">21</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo22.jpg" alt="Visual work 22" loading="lazy" />
+          <span class="gallery-number">22</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo23.jpg" alt="Visual work 23" loading="lazy" />
+          <span class="gallery-number">23</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo24.jpg" alt="Visual work 24" loading="lazy" />
+          <span class="gallery-number">24</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo25.jpg" alt="Visual work 25" loading="lazy" />
+          <span class="gallery-number">25</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo26.jpg" alt="Visual work 26" loading="lazy" />
+          <span class="gallery-number">26</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo27.jpg" alt="Visual work 27" loading="lazy" />
+          <span class="gallery-number">27</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo28.jpg" alt="Visual work 28" loading="lazy" />
+          <span class="gallery-number">28</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo29.jpg" alt="Visual work 29" loading="lazy" />
+          <span class="gallery-number">29</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo30.jpg" alt="Visual work 30" loading="lazy" />
+          <span class="gallery-number">30</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo31.jpg" alt="Visual work 31" loading="lazy" />
+          <span class="gallery-number">31</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo32.jpg" alt="Visual work 32" loading="lazy" />
+          <span class="gallery-number">32</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo33.jpg" alt="Visual work 33" loading="lazy" />
+          <span class="gallery-number">33</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo34.jpg" alt="Visual work 34" loading="lazy" />
+          <span class="gallery-number">34</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo35.jpg" alt="Visual work 35" loading="lazy" />
+          <span class="gallery-number">35</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo36.jpg" alt="Visual work 36" loading="lazy" />
+          <span class="gallery-number">36</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo37.jpg" alt="Visual work 37" loading="lazy" />
+          <span class="gallery-number">37</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo38.jpg" alt="Visual work 38" loading="lazy" />
+          <span class="gallery-number">38</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo39.jpg" alt="Visual work 39" loading="lazy" />
+          <span class="gallery-number">39</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo40.jpg" alt="Visual work 40" loading="lazy" />
+          <span class="gallery-number">40</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo41.jpg" alt="Visual work 41" loading="lazy" />
+          <span class="gallery-number">41</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo42.jpg" alt="Visual work 42" loading="lazy" />
+          <span class="gallery-number">42</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo43.jpg" alt="Visual work 43" loading="lazy" />
+          <span class="gallery-number">43</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo44.jpg" alt="Visual work 44" loading="lazy" />
+          <span class="gallery-number">44</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo45.jpg" alt="Visual work 45" loading="lazy" />
+          <span class="gallery-number">45</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo46.jpg" alt="Visual work 46" loading="lazy" />
+          <span class="gallery-number">46</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo47.jpg" alt="Visual work 47" loading="lazy" />
+          <span class="gallery-number">47</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo48.jpg" alt="Visual work 48" loading="lazy" />
+          <span class="gallery-number">48</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo49.jpg" alt="Visual work 49" loading="lazy" />
+          <span class="gallery-number">49</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo50.jpg" alt="Visual work 50" loading="lazy" />
+          <span class="gallery-number">50</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo51.jpg" alt="Visual work 51" loading="lazy" />
+          <span class="gallery-number">51</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo52.jpg" alt="Visual work 52" loading="lazy" />
+          <span class="gallery-number">52</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo53.jpg" alt="Visual work 53" loading="lazy" />
+          <span class="gallery-number">53</span>
+        </a>
+
+        <a class="gallery-item">
+          <img src="assets/images/photo54.jpg" alt="Visual work 54" loading="lazy" />
+          <span class="gallery-number">54</span>
+        </a>
+      </section>
+    </main>
+
+    <div class="modal" id="imageModal">
+      <button class="modal-close" id="modalClose" aria-label="Close image">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <img id="modalImage" class="modal-image" alt="Full visual work" />
     </div>
-  </header>
 
-  <!-- المعرض -->
-  <main class="container">
-    <div id="gallery-grid" class="gallery-grid"></div>
-  </main>
+    <script>
+      const items = document.querySelectorAll(".gallery-item");
 
-  <script>
-    const galleryGrid = document.getElementById("gallery-grid");
-    const totalImages = 36;
-    const imageFolder = "assets/images/";
+      const modal = document.getElementById("imageModal");
 
-    for (let i = 1; i <= totalImages; i++) {
-        const card = document.createElement("div");
-        card.className = "gallery-card"; 
-        const imageSrc = `${imageFolder}photo${i}.jpg`;
-        
-        card.innerHTML = `
-            <div class="card-image-wrapper">
-                <img src="${imageSrc}" alt="عمل فوتوغرافي ${i}" loading="lazy" onclick="openGalleryModal('${imageSrc}')"/>
-            </div>
-            <div class="card-overlay">
-                <h3>عمل فوتوغرافي #${i}</h3>
-                <span>تصوير فوتوغرافي</span>
-            </div>
-        `;
-        galleryGrid.appendChild(card);
-    }
+      const modalImage = document.getElementById("modalImage");
 
-    // دالة فتح الصورة بحجمها الكامل
-    function openGalleryModal(imgSrc) {
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('fullImage');
-        if (modal && modalImg) {
-            modal.style.display = 'flex';
-            modalImg.src = imgSrc;
+      const close = document.getElementById("modalClose");
+
+      items.forEach((item) => {
+        item.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const image = item.querySelector("img");
+
+          if (!image) return;
+
+          modalImage.src = image.src;
+
+          modal.classList.add("open");
+
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      const closeModal = () => {
+        modal.classList.remove("open");
+
+        document.body.style.overflow = "";
+
+        setTimeout(() => {
+          modalImage.src = "";
+        }, 200);
+      };
+
+      close.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
         }
-    }
+      });
 
-    // دالة إغلاق النافذة
-    document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('imageModal');
-        const closeBtn = document.querySelector('.close-modal');
-        
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeModal();
         }
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) { modal.style.display = 'none'; }
-            });
-        }
-    });
-</script>
-  
-<!-- نافذة عرض الصورة المكبرة -->
-<div id="imageModal" class="image-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; z-index: 9999;">
-    <span class="close-modal" style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
-    <img class="modal-content" id="fullImage" style="max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
-</div>
+      });
 
-</body>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch((error) => {
+            console.warn("PWA registration failed:", error);
+          });
+        });
+      }
+    </script>
+  </body>
 </html>

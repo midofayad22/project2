@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     width="512"
+     height="512">
+
+  <defs>
+
+    <!-- =========================
+         PREMIUM BACKGROUND
+         ========================= -->
+
+    <linearGradient id="background"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1">
+
+      <stop offset="0%"
+            stop-color="#061513"/>
+
+      <stop offset="45%"
+            stop-color="#0A2223"/>
+
+      <stop offset="100%"
+            stop-color="#101D30"/>
+
+    </linearGradient>
+
+
+    <!-- =========================
+         MAIN F GRADIENT
+         ========================= -->
+
+    <linearGradient id="fGradient"
+                    x1="0.05"
+                    y1="0.95"
+                    x2="0.95"
+                    y2="0.05">
+
+      <stop offset="0%"
+            stop-color="#068f92"/>
+
+      <stop offset="28%"
+            stop-color="#038585"/>
+
+      <stop offset="52%"
+            stop-color="#0983b7"/>
+
+      <stop offset="74%"
+            stop-color="#28a2ea"/>
+
+      <stop offset="100%"
+            stop-color="#fad87c"/>
+
+    </linearGradient>
+
+
+    <!-- =========================
+         SECOND GRADIENT
+         ========================= -->
+
+    <linearGradient id="fHighlight"
+                    x1="0"
+                    y1="1"
+                    x2="1"
+                    y2="0">
+
+      <stop offset="0%"
+            stop-color="#0a858e"
+            stop-opacity="0.95"/>
+
+      <stop offset="50%"
+            stop-color="#1fb5e7"
+            stop-opacity="0.55"/>
+
+      <stop offset="100%"
+            stop-color="#C8A951"
+            stop-opacity="0.9"/>
+
+    </linearGradient>
+
+
+    <!-- =========================
+         SOFT LIGHT
+         ========================= -->
+
+    <radialGradient id="ambient"
+                    cx="50%"
+                    cy="42%"
+                    r="58%">
+
+      <stop offset="0%"
+            stop-color="#05ac96"
+            stop-opacity="0.14"/>
+
+      <stop offset="55%"
+            stop-color="#0799b3"
+            stop-opacity="0.06"/>
+
+      <stop offset="100%"
+            stop-color="#11767f"
+            stop-opacity="0"/>
+
+    </radialGradient>
+
+
+    <!-- =========================
+         F GLOW
+         ========================= -->
+
+    <filter id="fGlow"
+            x="-40%"
+            y="-40%"
+            width="180%"
+            height="180%">
+
+      <feGaussianBlur
+          stdDeviation="10"
+          result="blur"/>
+
+      <feColorMatrix
+          in="blur"
+          type="matrix"
+          values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 0.28 0"/>
+
+      <feMerge>
+
+        <feMergeNode
+            in="blur"/>
+
+        <feMergeNode
+            in="SourceGraphic"/>
+
+      </feMerge>
+
+    </filter>
+
+
+    <!-- =========================
+         CLIP
+         ========================= -->
+
+    <clipPath id="rounded">
+
+      <rect
+          width="512"
+          height="512"
+          rx="112"/>
+
+    </clipPath>
+
+  </defs>
+
+
+  <!-- =========================
+       BACKGROUND
+       ========================= -->
+
+  <rect
+      width="512"
+      height="512"
+      rx="112"
+      fill="url(#background)"/>
+
+
+  <!-- =========================
+       AMBIENT LIGHT
+       ========================= -->
+
+  <rect
+      width="512"
+      height="512"
+      rx="112"
+      fill="url(#ambient)"/>
+
+
+  <!-- =========================
+       VERY SUBTLE INNER BORDER
+       ========================= -->
+
+  <rect
+      x="24"
+      y="24"
+      width="464"
+      height="464"
+      rx="94"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity="0.055"
+      stroke-width="2"/>
+
+
+  <!-- =========================
+       MAIN F
+       ========================= -->
+
+  <g filter="url(#fGlow)">
+
+    <path
+      d="
+        M 185 120
+
+        C 169 120
+          158 131
+          158 147
+
+        V 365
+
+        C 158 381
+          169 392
+          185 392
+
+        C 201 392
+          212 381
+          212 365
+
+        V 287
+
+        H 312
+
+        C 328 287
+          339 276
+          339 260
+
+        C 339 244
+          328 233
+          312 233
+
+        H 212
+
+        V 174
+
+        H 337
+
+        C 353 174
+          364 163
+          364 147
+
+        C 364 131
+          353 120
+          337 120
+
+        Z
+      "
+
+      fill="url(#fGradient)"/>
+
+
+    <!-- =========================
+         INNER FLOW / DEPTH
+         ========================= -->
+
+    <path
+      d="
+        M 212 174
+
+        H 337
+
+        C 353 174
+          364 163
+          364 147
+
+        C 364 140
+          361 133
+          357 128
+
+        C 351 123
+          345 120
+          337 120
+
+        H 185
+
+        C 169 120
+          158 131
+          158 147
+
+        V 365
+
+        C 158 381
+          169 392
+          185 392
+
+        C 194 392
+          204 388
+          208 381
+
+        C 211 376
+          212 371
+          212 365
+
+        V 287
+
+        H 239
+
+        V 233
+
+        H 212
+
+        Z
+      "
+
+      fill="url(#fHighlight)"
+      opacity="0.38"/>
+
+  </g>
+
+
+  <!-- =========================
+       SUBTLE SPECULAR HIGHLIGHT
+       ========================= -->
+
+  <path
+      d="
+        M 185 130
+        C 174 130
+          166 138
+          166 150
+        V 354
+      "
+
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity="0.17"
+      stroke-width="4"
+      stroke-linecap="round"/>
+
+
+  <!-- =========================
+       VERY SUBTLE BOTTOM SHADOW
+       ========================= -->
+
+  <path
+      d="
+        M 137 414
+        C 205 442
+          316 442
+          384 410
+      "
+
+      fill="none"
+      stroke="#02343d"
+      stroke-opacity="0.16"
+      stroke-width="10"
+      stroke-linecap="round"/>
+
+
+  <!-- =========================
+       OUTER PREMIUM EDGE
+       ========================= -->
+
+  <rect
+      x="18"
+      y="18"
+      width="476"
+      height="476"
+      rx="101"
+      fill="none"
+      stroke="url(#fGradient)"
+      stroke-opacity="0.10"
+      stroke-width="2"/>
+
+</svg>
