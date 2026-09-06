@@ -1,52 +1,58 @@
 <!doctype html>
 <html lang="ar" dir="rtl" id="htmlRoot">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الحميد فياض | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        .stat-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .stat-card-link:hover .stat-box {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+        
+        /* تنسيق أنيق ومستجيب لزر التفاصيل الأكاديمية */
+        .academic-btn {
+            background-color: #1a1a1a !important;
+            color: #D4AF37 !important;
+            border: 2px solid #D4AF37 !important;
+            padding: 10px 18px !important;
+            border-radius: 8px !important;
+            cursor: pointer !important;
+            margin-top: 12px !important;
+            font-family: 'Tajawal', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            transition: all 0.3s ease !important;
+            display: inline-block !important;
+        }
+        .academic-btn:hover {
+            background-color: #D4AF37 !important;
+            color: #111 !important;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
+        }
+        .academic-btn:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-    <meta name="theme-color" content="#071A18" />
-    <meta name="application-name" content="Abdullhamid Fayad" />
-    <meta name="description" content="Abdullhamid Fayad — Front-End Developer and Computer Engineering Student." />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="FAYAD" />
-
-    <title>عبد الحميد فياض — Front-End Developer</title>
-
-    <!-- PWA -->
-    <link rel="manifest" href="/manifest.json" />
-
-    <!-- FAVICON -->
-<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
-<link rel="shortcut icon" href="/icons/icon-192.png" type="image/png">
-
-<!-- APP ICONS -->
-<link rel="apple-touch-icon" href="/icons/icon-180.png" sizes="180x180">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap"
-      rel="stylesheet" />
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-    <!-- Vercel Analytics -->
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <!-- Ambient background -->
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-    <div class="ambient ambient-three"></div>
+    <!-- Dynamic Cursor Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
 
     <!-- ================= HEADER ================= -->
 
