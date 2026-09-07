@@ -1145,22 +1145,32 @@ SECTION HEADINGS
 
 
 /* =========================================================
-SKILLS
+   SKILLS
 ========================================================= */
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 14px;
+  align-items: stretch;
 }
 
+
+/* =========================================================
+   BASE SKILL CARD
+========================================================= */
+
 .skill-card {
+  position: relative;
+  min-width: 0;
   min-height: 265px;
 
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   padding: 22px;
+
+  overflow: hidden;
 
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -1184,47 +1194,84 @@ SKILLS
   border-color: rgba(45, 212, 163, 0.22);
 }
 
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
 .skill-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  min-height: 20px;
+
   color: var(--muted-2);
+
   font-family: "Inter", sans-serif;
-  font-size: 8px;
+  font-size: 9px;
+  line-height: 1.4;
 }
 
 .skill-card-top i {
+  flex-shrink: 0;
+
   color: var(--green);
   font-size: 17px;
 }
 
+
+/* =========================================================
+   CARD MAIN CONTENT
+========================================================= */
+
 .skill-card-main {
-  margin-top: 50px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-width: 0;
+
+  margin-top: 32px;
 }
 
 .skill-kicker {
+  margin: 0;
+
   color: var(--muted-2);
-  font-size: 7px;
-  letter-spacing: 0.14em;
+
+  font-size: 9px;
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
 }
 
 .skill-card h3 {
-  margin: 9px 0 12px;
+  margin: 9px 0 11px;
 
   color: var(--text);
 
   font-family: "Inter", "Tajawal", sans-serif;
   font-size: 22px;
-  line-height: 1.15;
+  font-weight: 700;
+  line-height: 1.2;
+
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .skill-card h3 span {
   display: block;
+
+  margin-top: 2px;
+
   color: var(--green-soft);
 }
 
 .skill-card p {
+  width: 100%;
   max-width: 390px;
 
   margin: 0;
@@ -1232,26 +1279,41 @@ SKILLS
   color: var(--muted);
 
   font-size: 13px;
-  line-height: 1.9;
+  line-height: 1.75;
+
+  overflow-wrap: break-word;
 }
 
-.skill-tags {
-  position: absolute;
 
-  right: 22px;
-  bottom: 22px;
-  left: 22px;
+/* =========================================================
+   SKILL TAGS
+========================================================= */
+
+.skill-tags {
+  position: static;
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   gap: 6px;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding-top: 20px;
 
   direction: ltr;
 }
 
 .skill-tags span {
-  padding: 5px 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 24px;
+
+  padding: 4px 8px;
 
   border: 1px solid var(--line);
   border-radius: 5px;
@@ -1259,25 +1321,40 @@ SKILLS
   color: var(--muted);
 
   font-family: "Inter", sans-serif;
-  font-size: 7px;
+  font-size: 8px;
+  line-height: 1.2;
+
+  white-space: nowrap;
 }
 
+
+/* =========================================================
+   SKILL LETTER
+========================================================= */
+
 .skill-letter {
+  flex-shrink: 0;
+
   color: var(--green-soft);
 
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 800;
+  line-height: 1;
 }
 
+
+/* =========================================================
+   SKILL LINE
+========================================================= */
+
 .skill-line {
-  position: absolute;
+  position: static;
 
-  right: 22px;
-  bottom: 22px;
-  left: 22px;
-
+  width: 100%;
   height: 1px;
+
+  margin-top: 16px;
 
   background: linear-gradient(
     90deg,
@@ -1290,13 +1367,14 @@ SKILLS
 
 
 /* =========================================================
-WIDE SKILL CARD
+   WIDE SKILL CARD
 ========================================================= */
 
 .skill-wide {
   grid-column: span 2;
 
   min-height: 220px;
+  min-width: 0;
 
   display: grid;
 
@@ -1304,7 +1382,7 @@ WIDE SKILL CARD
 
   align-items: center;
 
-  gap: 40px;
+  gap: 36px;
 }
 
 .skill-wide-content {
@@ -1322,8 +1400,8 @@ WIDE SKILL CARD
 
 
 /* =========================================================
-VISUAL TYPE CARD
-DESKTOP
+   VISUAL TYPE CARD
+   DESKTOP
 ========================================================= */
 
 .visual-type-card {
@@ -1351,8 +1429,10 @@ DESKTOP
 .visual-type-card small {
   color: var(--muted-2);
 
-  font-size: 7px;
-  letter-spacing: 0.16em;
+  font-size: 8px;
+  line-height: 1.3;
+
+  letter-spacing: 0.14em;
 }
 
 .visual-type-card strong {
@@ -1366,6 +1446,262 @@ DESKTOP
 }
 
 
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-wide {
+    grid-column: 1 / -1;
+
+    grid-template-columns: minmax(0, 1fr) 135px;
+
+    gap: 28px;
+  }
+
+  .skill-card {
+    min-height: 260px;
+    padding: 20px;
+  }
+
+  .skill-card-main {
+    margin-top: 28px;
+  }
+
+  .skill-card h3 {
+    font-size: 20px;
+  }
+
+  .skill-card p {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .visual-type-card {
+    width: 110px;
+    height: 110px;
+  }
+
+  .visual-type-card strong {
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .skill-card,
+  .skill-wide {
+    grid-column: auto;
+  }
+
+  .skill-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .skill-card-main {
+    margin-top: 26px;
+  }
+
+  .skill-card h3 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .skill-card p {
+    max-width: none;
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .skill-tags {
+    gap: 6px;
+
+    padding-top: 18px;
+  }
+
+  .skill-tags span {
+    min-height: 25px;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+  }
+
+
+  /* -----------------------------------------
+     WIDE CARD
+  ----------------------------------------- */
+
+  .skill-wide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 24px;
+
+    min-height: auto;
+  }
+
+  .skill-wide-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .visual-type-card {
+    width: 100px;
+    height: 100px;
+
+    align-self: center;
+  }
+
+  .visual-type-card strong {
+    font-size: 34px;
+  }
+
+  .visual-type-card span,
+  .visual-type-card small {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .skills-grid {
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+
+  .skill-card-top {
+    font-size: 8px;
+  }
+
+  .skill-card-top i {
+    font-size: 16px;
+  }
+
+  .skill-card-main {
+    margin-top: 24px;
+  }
+
+  .skill-kicker {
+    font-size: 8px;
+  }
+
+  .skill-card h3 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .skill-card p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .skill-tags {
+    gap: 5px;
+
+    padding-top: 16px;
+  }
+
+  .skill-tags span {
+    min-height: 23px;
+
+    padding: 4px 7px;
+
+    font-size: 7.5px;
+  }
+
+  .skill-line {
+    margin-top: 14px;
+  }
+
+
+  /* -----------------------------------------
+     WIDE CARD
+  ----------------------------------------- */
+
+  .skill-wide {
+    gap: 22px;
+  }
+
+  .skill-wide h3 span {
+    display: block;
+    margin-top: 2px;
+  }
+
+  .visual-type-card {
+    width: 90px;
+    height: 90px;
+  }
+
+  .visual-type-card strong {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .skill-card {
+    padding: 16px;
+  }
+
+  .skill-card h3 {
+    font-size: 18px;
+  }
+
+  .skill-card p {
+    font-size: 11.5px;
+    line-height: 1.7;
+  }
+
+  .skill-tags span {
+    font-size: 7px;
+    padding-inline: 6px;
+  }
+
+  .visual-type-card {
+    width: 82px;
+    height: 82px;
+  }
+
+  .visual-type-card strong {
+    font-size: 27px;
+  }
+}
 /* =========================================================
 EDUCATION
 ========================================================= */
