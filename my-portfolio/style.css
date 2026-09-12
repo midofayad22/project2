@@ -109,12 +109,12 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(15, 65, 58, 0.28);
+  background: rgba(14, 73, 74, 0.28);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(8, 51, 45, 0.5);
+  background: rgba(7, 68, 69, 0.5);
 }
 
 /* =========================================================
@@ -307,7 +307,7 @@ button {
 }
 
 .site-header.is-scrolled {
-  background: rgba(5, 13, 11, 0.88);
+  background: rgba(12, 31, 32, 0.88);
   border-bottom: 1px solid var(--line);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(14px);
@@ -1143,7 +1143,6 @@ SECTION HEADINGS
   line-height: 1.9;
 }
 
-
 /* =========================================================
    SKILLS
 ========================================================= */
@@ -1154,7 +1153,6 @@ SECTION HEADINGS
   gap: 14px;
   align-items: stretch;
 }
-
 
 /* =========================================================
    BASE SKILL CARD
@@ -1175,11 +1173,7 @@ SECTION HEADINGS
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
 
-  background: linear-gradient(
-    145deg,
-    rgba(15, 29, 24, 0.92),
-    rgba(8, 16, 13, 0.92)
-  );
+  background: linear-gradient(145deg, rgba(15, 29, 24, 0.92), rgba(8, 16, 13, 0.92));
 
   box-shadow: var(--shadow-card);
 
@@ -1193,7 +1187,6 @@ SECTION HEADINGS
   transform: translateY(-4px);
   border-color: rgba(45, 212, 163, 0.22);
 }
-
 
 /* =========================================================
    CARD TOP
@@ -1219,7 +1212,6 @@ SECTION HEADINGS
   color: var(--green);
   font-size: 17px;
 }
-
 
 /* =========================================================
    CARD MAIN CONTENT
@@ -1284,7 +1276,6 @@ SECTION HEADINGS
   overflow-wrap: break-word;
 }
 
-
 /* =========================================================
    SKILL TAGS
 ========================================================= */
@@ -1327,7 +1318,6 @@ SECTION HEADINGS
   white-space: nowrap;
 }
 
-
 /* =========================================================
    SKILL LETTER
 ========================================================= */
@@ -1343,7 +1333,6 @@ SECTION HEADINGS
   line-height: 1;
 }
 
-
 /* =========================================================
    SKILL LINE
 ========================================================= */
@@ -1356,15 +1345,10 @@ SECTION HEADINGS
 
   margin-top: 16px;
 
-  background: linear-gradient(
-    90deg,
-    var(--green),
-    transparent
-  );
+  background: linear-gradient(90deg, var(--green), transparent);
 
   opacity: 0.3;
 }
-
 
 /* =========================================================
    WIDE SKILL CARD
@@ -1397,7 +1381,6 @@ SECTION HEADINGS
 .skill-wide h3 span {
   display: inline;
 }
-
 
 /* =========================================================
    VISUAL TYPE CARD
@@ -1445,13 +1428,11 @@ SECTION HEADINGS
   line-height: 1;
 }
 
-
 /* =========================================================
    LARGE TABLET / SMALL DESKTOP
 ========================================================= */
 
 @media (max-width: 1050px) {
-
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1492,13 +1473,11 @@ SECTION HEADINGS
   }
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 760px) {
-
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1545,7 +1524,6 @@ SECTION HEADINGS
     font-size: 8px;
   }
 
-
   /* -----------------------------------------
      WIDE CARD
   ----------------------------------------- */
@@ -1582,13 +1560,11 @@ SECTION HEADINGS
   }
 }
 
-
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 520px) {
-
   .skills-grid {
     gap: 10px;
   }
@@ -1644,7 +1620,6 @@ SECTION HEADINGS
     margin-top: 14px;
   }
 
-
   /* -----------------------------------------
      WIDE CARD
   ----------------------------------------- */
@@ -1668,13 +1643,11 @@ SECTION HEADINGS
   }
 }
 
-
 /* =========================================================
    VERY SMALL PHONES
 ========================================================= */
 
 @media (max-width: 380px) {
-
   .skill-card {
     padding: 16px;
   }
@@ -1725,11 +1698,7 @@ EDUCATION
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
 
-  background: linear-gradient(
-    135deg,
-    rgba(16, 30, 25, 0.92),
-    rgba(8, 16, 13, 0.96)
-  );
+  background: linear-gradient(135deg, rgba(16, 30, 25, 0.92), rgba(8, 16, 13, 0.96));
 
   box-shadow: var(--shadow-card);
 }
@@ -1843,13 +1812,11 @@ EDUCATION
   font-size: 8px;
 }
 
-
 /* =========================================================
 TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
-
   .skills-section,
   .projects-section,
   .visual-section,
@@ -1905,20 +1872,17 @@ TABLET
   }
 }
 
-
 /* =========================================================
 MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
-
   .skills-section,
   .projects-section,
   .visual-section,
   .contact-section {
     padding-block: 65px;
   }
-
 
   /* =======================================================
   SECTION HEADING
@@ -1947,7 +1911,6 @@ MOBILE
     line-height: 1.85;
   }
 
-
   /* =======================================================
   SKILLS GRID
   ======================================================= */
@@ -1956,7 +1919,6 @@ MOBILE
     grid-template-columns: 1fr;
     gap: 12px;
   }
-
 
   /* =======================================================
   NORMAL SKILL CARD
@@ -2008,7 +1970,6 @@ MOBILE
     bottom: 18px;
     left: 18px;
   }
-
 
   /* =======================================================
   WIDE SKILL CARD — MOBILE
@@ -2066,7 +2027,6 @@ MOBILE
     max-width: none;
   }
 
-
   /* =======================================================
   VISUAL TYPE AREA — COMPLETELY SEPARATE
   ======================================================= */
@@ -2118,7 +2078,6 @@ MOBILE
     font-size: 6px;
   }
 
-
   /* =======================================================
   LETTER / DECORATION
   ======================================================= */
@@ -2130,7 +2089,6 @@ MOBILE
 
     font-size: 16px;
   }
-
 
   /* =======================================================
   EDUCATION
@@ -2198,13 +2156,11 @@ MOBILE
   }
 }
 
-
 /* =========================================================
 SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 380px) {
-
   .skills-section,
   .projects-section,
   .visual-section,
@@ -2215,7 +2171,6 @@ SMALL MOBILE
   .section-heading h2 {
     font-size: 29px;
   }
-
 
   /* =======================================================
   NORMAL SKILL CARD
@@ -2242,7 +2197,6 @@ SMALL MOBILE
 
     font-size: 11px;
   }
-
 
   /* =======================================================
   WIDE CARD
@@ -2275,7 +2229,6 @@ SMALL MOBILE
     max-width: 100%;
   }
 
-
   /* =======================================================
   TYPE LAYOUT — SEPARATE MOBILE AREA
   ======================================================= */
@@ -2298,7 +2251,6 @@ SMALL MOBILE
   .visual-type-card strong {
     font-size: 28px;
   }
-
 
   /* =======================================================
   EDUCATION
@@ -2704,7 +2656,1196 @@ SMALL MOBILE
 .project-link:hover {
   color: var(--green-soft);
 }
+/* =========================================================
+   TNU HUB — FEATURED PROJECT
+   Inspired by TNU Hub visual identity
+   Portfolio presentation — not a copy of the actual UI
+========================================================= */
 
+.tnu-featured {
+  --tnu-blue: #4d8dff;
+  --tnu-blue-soft: #76a9ff;
+  --tnu-gold: #d7ad5a;
+  --tnu-gold-soft: #efca78;
+  --tnu-navy: #071326;
+  --tnu-navy-deep: #040b16;
+  --tnu-panel: #0b1729;
+  --tnu-panel-soft: #101e33;
+  --tnu-line: rgba(120, 164, 225, 0.14);
+
+  border-color: rgba(77, 141, 255, 0.18);
+
+  background:
+    radial-gradient(circle at 85% 20%, rgba(77, 141, 255, 0.055), transparent 32%),
+    radial-gradient(circle at 15% 75%, rgba(215, 173, 90, 0.035), transparent 30%),
+    linear-gradient(145deg, rgba(9, 22, 39, 0.98), rgba(5, 12, 22, 0.98));
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.tnu-featured .project-index {
+  color: rgba(145, 174, 215, 0.6);
+}
+
+.tnu-featured .featured-top h3 strong {
+  color: var(--tnu-blue-soft);
+}
+
+.tnu-featured .project-year {
+  color: var(--tnu-gold);
+}
+
+/* =========================================================
+   PREVIEW AREA
+========================================================= */
+
+.tnu-preview {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 35px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 50% 45%, rgba(77, 141, 255, 0.11), transparent 52%),
+    radial-gradient(circle at 82% 18%, rgba(215, 173, 90, 0.055), transparent 34%), #050d18;
+}
+
+/* subtle background glow */
+
+.tnu-preview::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, transparent 49.5%, rgba(255, 255, 255, 0.018) 50%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(255, 255, 255, 0.018) 50%, transparent 50.5%);
+
+  background-size: 42px 42px;
+
+  opacity: 0.18;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   BROWSER WINDOW
+========================================================= */
+
+.tnu-browser-window {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(125, 164, 218, 0.18);
+
+  border-radius: 13px;
+
+  background: var(--tnu-navy-deep);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.42),
+    0 0 70px rgba(42, 96, 170, 0.08);
+
+  transform: perspective(1200px) rotateY(-2deg) rotateX(1deg);
+
+  transition:
+    transform 0.5s var(--ease),
+    box-shadow 0.5s ease;
+}
+
+.tnu-preview:hover .tnu-browser-window {
+  transform: perspective(1200px) rotateY(0) rotateX(0) translateY(-4px);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.48),
+    0 0 90px rgba(42, 96, 170, 0.12);
+}
+
+/* =========================================================
+   BROWSER BAR
+========================================================= */
+
+.tnu-browser-bar {
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 10px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+  background: #0b1422;
+
+  direction: ltr;
+}
+
+.tnu-browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.tnu-browser-dots span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #53677e;
+}
+
+.tnu-browser-address {
+  flex: 1;
+
+  height: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: #637892;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 6px;
+}
+
+.tnu-browser-address i {
+  color: var(--tnu-blue);
+
+  font-size: 5px;
+}
+
+/* =========================================================
+   APP SCREEN
+========================================================= */
+
+.tnu-screen {
+  display: grid;
+
+  grid-template-columns: 43px 1fr;
+
+  min-height: 315px;
+
+  direction: ltr;
+
+  background: #071221;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.tnu-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 13px;
+
+  padding-top: 13px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.055);
+
+  background: linear-gradient(180deg, #081525 0%, #06101d 100%);
+}
+
+.tnu-logo-mark {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 9px;
+
+  border: 1px solid rgba(215, 173, 90, 0.35);
+
+  border-radius: 6px;
+
+  background: linear-gradient(145deg, rgba(215, 173, 90, 0.18), rgba(77, 141, 255, 0.14));
+
+  color: var(--tnu-gold-soft);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+.tnu-sidebar-item {
+  width: 23px;
+  height: 23px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 6px;
+
+  color: #50657d;
+
+  font-size: 8px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tnu-sidebar-item.active {
+  color: var(--tnu-blue-soft);
+
+  background: rgba(77, 141, 255, 0.095);
+}
+
+.tnu-sidebar-item:hover {
+  color: var(--tnu-blue-soft);
+
+  transform: translateY(-1px);
+}
+
+.tnu-sidebar-spacer {
+  flex: 1;
+}
+
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.tnu-main {
+  min-width: 0;
+
+  padding: 14px;
+
+  direction: ltr;
+
+  background: radial-gradient(circle at 80% 0%, rgba(77, 141, 255, 0.045), transparent 34%), #071221;
+}
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.tnu-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.tnu-page-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tnu-page-title span {
+  color: #647b98;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 5px;
+
+  letter-spacing: 0.13em;
+}
+
+.tnu-page-title strong {
+  color: #dce6f3;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.tnu-top-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.tnu-notification {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  display: grid;
+  place-items: center;
+
+  color: #607590;
+
+  font-size: 8px;
+}
+
+.tnu-notification b {
+  position: absolute;
+
+  top: 3px;
+  right: 3px;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: var(--tnu-gold);
+}
+
+.tnu-avatar {
+  width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(77, 141, 255, 0.25);
+
+  border-radius: 50%;
+
+  background: rgba(77, 141, 255, 0.09);
+
+  color: var(--tnu-blue-soft);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.tnu-welcome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 19px 3px 14px;
+}
+
+.tnu-welcome small {
+  color: #526a84;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 5px;
+
+  letter-spacing: 0.1em;
+}
+
+.tnu-welcome h4 {
+  margin: 5px 0 3px;
+
+  color: #e5edf7;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+.tnu-welcome h4 span {
+  color: var(--tnu-blue-soft);
+}
+
+.tnu-welcome p {
+  margin: 0;
+
+  color: #62758c;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 6px;
+}
+
+.tnu-date {
+  color: rgba(215, 173, 90, 0.7);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 6px;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   STAT CARDS
+========================================================= */
+
+.tnu-stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 6px;
+}
+
+.tnu-stat-card {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  padding: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.tnu-stat-icon {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 5px;
+
+  background: rgba(77, 141, 255, 0.08);
+
+  color: var(--tnu-blue-soft);
+
+  font-size: 7px;
+}
+
+.tnu-stat-card > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tnu-stat-card small {
+  color: #526a84;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 4px;
+}
+
+.tnu-stat-card strong {
+  margin-top: 2px;
+
+  color: #dce6f3;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.tnu-dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 7px;
+
+  margin-top: 8px;
+}
+
+.tnu-panel {
+  min-width: 0;
+
+  padding: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.016);
+}
+
+.tnu-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.tnu-panel-head div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tnu-panel-head small {
+  color: #526a84;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 4px;
+}
+
+.tnu-panel-head strong {
+  color: #cbd8e8;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+}
+
+.tnu-panel-head > i {
+  color: #526a84;
+
+  font-size: 6px;
+}
+
+/* =========================================================
+   ANNOUNCEMENTS
+========================================================= */
+
+.tnu-announcement {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tnu-announcement:last-child {
+  border-bottom: 0;
+}
+
+.tnu-announcement-dot {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--tnu-gold);
+
+  box-shadow: 0 0 8px rgba(215, 173, 90, 0.22);
+}
+
+.tnu-announcement div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.tnu-announcement strong {
+  overflow: hidden;
+
+  color: #b9c9dc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 5px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.tnu-announcement small {
+  color: #536a82;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 4px;
+}
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.tnu-event {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.tnu-event:last-child {
+  border-bottom: 0;
+}
+
+.tnu-event-date {
+  width: 25px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(77, 141, 255, 0.15);
+
+  border-radius: 5px;
+
+  background: rgba(77, 141, 255, 0.055);
+}
+
+.tnu-event-date strong {
+  color: var(--tnu-blue-soft);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1;
+}
+
+.tnu-event-date small {
+  margin-top: 2px;
+
+  color: #536a82;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 4px;
+}
+
+.tnu-event > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.tnu-event > div:last-child strong {
+  overflow: hidden;
+
+  color: #b9c9dc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 5px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.tnu-event > div:last-child small {
+  color: #536a82;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 4px;
+}
+
+/* =========================================================
+   PREVIEW ARROW
+========================================================= */
+
+.tnu-preview-arrow {
+  position: absolute;
+
+  top: 47px;
+  left: 47px;
+
+  width: 39px;
+  height: 39px;
+
+  z-index: 4;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(77, 141, 255, 0.24);
+
+  border-radius: 50%;
+
+  background: rgba(4, 11, 22, 0.8);
+
+  color: var(--tnu-blue-soft);
+
+  font-size: 10px;
+
+  transition:
+    transform 0.3s var(--ease),
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tnu-preview:hover .tnu-preview-arrow {
+  transform: translate(3px, -3px);
+
+  border-color: rgba(215, 173, 90, 0.35);
+
+  background: rgba(77, 141, 255, 0.1);
+
+  color: var(--tnu-gold-soft);
+}
+
+/* =========================================================
+   PREVIEW LABEL
+========================================================= */
+
+.tnu-preview-label {
+  position: absolute;
+
+  right: 48px;
+  bottom: 46px;
+
+  z-index: 4;
+
+  padding: 6px 8px;
+
+  border: 1px solid rgba(125, 164, 218, 0.13);
+
+  border-radius: 5px;
+
+  background: rgba(4, 11, 22, 0.74);
+
+  color: #607895;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 6px;
+
+  letter-spacing: 0.08em;
+
+  direction: ltr;
+}
+
+/* =========================================================
+   INFO SIDE
+========================================================= */
+
+.tnu-featured .featured-info {
+  border-inline-start-color: var(--tnu-line);
+}
+
+.tnu-featured .project-kicker {
+  color: var(--tnu-blue-soft);
+}
+
+.tnu-featured .project-features i {
+  color: var(--tnu-blue-soft);
+}
+
+.tnu-featured .project-tags span {
+  border-color: var(--tnu-line);
+}
+
+.tnu-featured .project-link {
+  border-bottom-color: rgba(77, 141, 255, 0.38);
+}
+
+.tnu-featured .project-link i {
+  color: var(--tnu-gold-soft);
+}
+
+.tnu-featured .project-link:hover {
+  color: var(--tnu-blue-soft);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .tnu-preview {
+    min-height: 390px;
+
+    padding: 27px;
+  }
+
+  .tnu-screen {
+    min-height: 285px;
+  }
+
+  .tnu-main {
+    padding: 11px;
+  }
+
+  .tnu-welcome h4 {
+    font-size: 15px;
+  }
+
+  .tnu-preview-arrow {
+    top: 38px;
+    left: 38px;
+  }
+
+  .tnu-preview-label {
+    right: 38px;
+    bottom: 38px;
+  }
+}
+
+@media (max-width: 760px) {
+  .tnu-featured .featured-body {
+    grid-template-columns: 1fr;
+  }
+
+  .tnu-featured .featured-info {
+    border-inline-start: 0;
+
+    border-top: 1px solid var(--tnu-line);
+  }
+
+  .tnu-preview {
+    min-height: 360px;
+
+    padding: 22px;
+  }
+
+  .tnu-browser-window {
+    transform: none;
+  }
+
+  .tnu-preview:hover .tnu-browser-window {
+    transform: translateY(-2px);
+  }
+
+  .tnu-screen {
+    min-height: 275px;
+  }
+
+  .tnu-preview-arrow {
+    top: 30px;
+    left: 30px;
+  }
+
+  .tnu-preview-label {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .tnu-preview {
+    min-height: 300px;
+
+    padding: 15px;
+  }
+
+  .tnu-browser-window {
+    border-radius: 9px;
+  }
+
+  .tnu-browser-bar {
+    height: 25px;
+
+    gap: 8px;
+
+    padding: 0 7px;
+  }
+
+  .tnu-browser-dots span {
+    width: 4px;
+    height: 4px;
+  }
+
+  .tnu-browser-address {
+    height: 14px;
+
+    font-size: 5px;
+  }
+
+  .tnu-screen {
+    grid-template-columns: 31px 1fr;
+
+    min-height: 225px;
+  }
+
+  .tnu-sidebar {
+    gap: 8px;
+
+    padding-top: 9px;
+  }
+
+  .tnu-logo-mark {
+    width: 18px;
+    height: 18px;
+
+    margin-bottom: 5px;
+
+    font-size: 7px;
+  }
+
+  .tnu-sidebar-item {
+    width: 18px;
+    height: 18px;
+
+    font-size: 6px;
+  }
+
+  .tnu-main {
+    padding: 8px;
+  }
+
+  .tnu-topbar {
+    padding-bottom: 7px;
+  }
+
+  .tnu-page-title span {
+    font-size: 4px;
+  }
+
+  .tnu-page-title strong {
+    font-size: 6px;
+  }
+
+  .tnu-top-actions {
+    gap: 5px;
+  }
+
+  .tnu-notification {
+    width: 15px;
+    height: 15px;
+
+    font-size: 6px;
+  }
+
+  .tnu-avatar {
+    width: 15px;
+    height: 15px;
+
+    font-size: 5px;
+  }
+
+  .tnu-welcome {
+    padding: 12px 2px 9px;
+  }
+
+  .tnu-welcome small {
+    font-size: 4px;
+  }
+
+  .tnu-welcome h4 {
+    margin: 4px 0 2px;
+
+    font-size: 10px;
+  }
+
+  .tnu-welcome p {
+    font-size: 4px;
+  }
+
+  .tnu-date {
+    font-size: 4px;
+  }
+
+  .tnu-stat-grid {
+    gap: 4px;
+  }
+
+  .tnu-stat-card {
+    gap: 4px;
+
+    padding: 5px;
+  }
+
+  .tnu-stat-icon {
+    width: 15px;
+    height: 15px;
+
+    font-size: 5px;
+  }
+
+  .tnu-stat-card small {
+    font-size: 3px;
+  }
+
+  .tnu-stat-card strong {
+    font-size: 7px;
+  }
+
+  .tnu-dashboard-grid {
+    gap: 4px;
+
+    margin-top: 5px;
+  }
+
+  .tnu-panel {
+    padding: 5px;
+  }
+
+  .tnu-panel-head {
+    padding-bottom: 4px;
+  }
+
+  .tnu-panel-head small {
+    font-size: 3px;
+  }
+
+  .tnu-panel-head strong {
+    font-size: 5px;
+  }
+
+  .tnu-panel-head > i {
+    font-size: 4px;
+  }
+
+  .tnu-announcement,
+  .tnu-event {
+    gap: 4px;
+
+    padding: 4px 0;
+  }
+
+  .tnu-announcement-dot {
+    width: 3px;
+    height: 3px;
+  }
+
+  .tnu-announcement strong,
+  .tnu-event > div:last-child strong {
+    font-size: 3.5px;
+  }
+
+  .tnu-announcement small,
+  .tnu-event > div:last-child small {
+    font-size: 3px;
+  }
+
+  .tnu-event-date {
+    width: 18px;
+    height: 20px;
+  }
+
+  .tnu-event-date strong {
+    font-size: 6px;
+  }
+
+  .tnu-event-date small {
+    font-size: 3px;
+  }
+
+  .tnu-preview-arrow {
+    top: 22px;
+    left: 22px;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 8px;
+  }
+
+  .tnu-preview-label {
+    right: 22px;
+    bottom: 22px;
+
+    padding: 4px 5px;
+
+    font-size: 4px;
+  }
+
+  .tnu-featured .featured-info {
+    padding: 30px 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tnu-preview {
+    min-height: 260px;
+
+    padding: 10px;
+  }
+
+  .tnu-screen {
+    grid-template-columns: 27px 1fr;
+
+    min-height: 205px;
+  }
+
+  .tnu-main {
+    padding: 6px;
+  }
+
+  .tnu-sidebar {
+    gap: 6px;
+  }
+
+  .tnu-logo-mark {
+    width: 16px;
+    height: 16px;
+
+    font-size: 6px;
+  }
+
+  .tnu-sidebar-item {
+    width: 16px;
+    height: 16px;
+
+    font-size: 5px;
+  }
+
+  .tnu-stat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tnu-dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tnu-preview-arrow {
+    top: 16px;
+    left: 16px;
+  }
+
+  .tnu-preview-label {
+    right: 16px;
+    bottom: 16px;
+  }
+}
 /* =========================================================
    OTHER PROJECTS
 ========================================================= */
@@ -2801,7 +3942,6 @@ SMALL MOBILE
   letter-spacing: 0.06em;
 }
 
-
 /* =========================================================
    ELOMDA FAYAD TRUCKS
    BLUE / CYAN / STEEL
@@ -2814,34 +3954,15 @@ SMALL MOBILE
 
 .project-elomda .project-visual {
   background:
-    radial-gradient(
-      circle at 50% 48%,
-      rgba(56, 189, 248, 0.22),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 82% 20%,
-      rgba(14, 116, 144, 0.16),
-      transparent 36%
-    ),
-    linear-gradient(
-      135deg,
-      #0a1c2a 0%,
-      #0b1822 55%,
-      #071017 100%
-    );
+    radial-gradient(circle at 50% 48%, rgba(56, 189, 248, 0.22), transparent 32%),
+    radial-gradient(circle at 82% 20%, rgba(14, 116, 144, 0.16), transparent 36%),
+    linear-gradient(135deg, #0a1c2a 0%, #0b1822 55%, #071017 100%);
 }
 
 .project-elomda .project-orb {
-  border: 1px solid rgba(56, 189, 248, 0.30);
+  border: 1px solid rgba(56, 189, 248, 0.3);
 
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      rgba(103, 217, 255, 0.30),
-      transparent 45%
-    ),
-    rgba(56, 189, 248, 0.08);
+  background: radial-gradient(circle at 35% 30%, rgba(103, 217, 255, 0.3), transparent 45%), rgba(56, 189, 248, 0.08);
 
   box-shadow:
     0 0 70px rgba(56, 189, 248, 0.14),
@@ -2851,7 +3972,6 @@ SMALL MOBILE
 .project-elomda .truck-brand strong {
   color: #67d9ff;
 }
-
 
 /* =========================================================
    FAYAD TRUCKS
@@ -2865,34 +3985,15 @@ SMALL MOBILE
 
 .project-fayad-trucks .project-visual {
   background:
-    radial-gradient(
-      circle at 50% 48%,
-      rgba(245, 158, 11, 0.22),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 82% 20%,
-      rgba(217, 119, 6, 0.15),
-      transparent 36%
-    ),
-    linear-gradient(
-      135deg,
-      #28190c 0%,
-      #1b130c 55%,
-      #100d09 100%
-    );
+    radial-gradient(circle at 50% 48%, rgba(245, 158, 11, 0.22), transparent 32%),
+    radial-gradient(circle at 82% 20%, rgba(217, 119, 6, 0.15), transparent 36%),
+    linear-gradient(135deg, #28190c 0%, #1b130c 55%, #100d09 100%);
 }
 
 .project-fayad-trucks .project-orb {
-  border: 1px solid rgba(245, 158, 11, 0.30);
+  border: 1px solid rgba(245, 158, 11, 0.3);
 
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      rgba(251, 191, 36, 0.30),
-      transparent 45%
-    ),
-    rgba(245, 158, 11, 0.08);
+  background: radial-gradient(circle at 35% 30%, rgba(251, 191, 36, 0.3), transparent 45%), rgba(245, 158, 11, 0.08);
 
   box-shadow:
     0 0 70px rgba(245, 158, 11, 0.14),
@@ -2902,7 +4003,6 @@ SMALL MOBILE
 .project-fayad-trucks .truck-brand strong {
   color: #f7c45b;
 }
-
 
 /* =========================================================
    PROJECT CONTENT
@@ -2950,11 +4050,7 @@ SMALL MOBILE
 .project-card:hover .project-arrow {
   color: var(--project-accent-soft);
 
-  border-color: color-mix(
-    in srgb,
-    var(--project-accent) 45%,
-    transparent
-  );
+  border-color: color-mix(in srgb, var(--project-accent) 45%, transparent);
 
   transform: translate(-2px, -2px);
 }
@@ -2967,7 +4063,6 @@ SMALL MOBILE
   letter-spacing: 0.1em;
   direction: ltr;
 }
-
 
 /* =========================================================
    MOBILE

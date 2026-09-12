@@ -2,54 +2,276 @@
 <html lang="ar" dir="rtl" id="htmlRoot">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- =====================================================
+         PRIMARY SEO
+    ====================================================== -->
 
     <title>عبد الحميد فياض | Front-End Developer</title>
 
     <meta
       name="description"
-      content="عبد الحميد فياض — Front-End Developer يبني واجهات ويب حديثة ومتجاوبة مع اهتمام بالتفاصيل البصرية وتجربة المستخدم." />
+      content="عبد الحميد فياض — Front-End Developer وطالب هندسة حاسبات، أبني واجهات ويب حديثة ومتجاوبة مع اهتمام بالأداء، تجربة المستخدم والتفاصيل البصرية."
+    />
+
+    <meta
+      name="keywords"
+      content="Abdullhamid Fayad, Abdulhamid Fayad, Abdullhamid, Fayad, Front-End Developer, Web Developer, HTML, CSS, JavaScript, React, TypeScript, UI UX, Portfolio, Egypt"
+    />
 
     <meta name="author" content="Abdullhamid Fayad" />
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <meta name="googlebot" content="index, follow" />
+
+    <meta name="language" content="Arabic" />
+
+    <meta name="revisit-after" content="7 days" />
+
+    <link
+      rel="canonical"
+      href="https://abdullhamid-fayad-portfolio.vercel.app/"
+    />
+
+    <!-- =====================================================
+         THEME / BROWSER
+    ====================================================== -->
+
     <meta name="theme-color" content="#07110f" />
     <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
 
-    <!-- PWA -->
+    <!-- =====================================================
+         PWA
+    ====================================================== -->
+
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Icons — المسارات بدون تغيير -->
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="icons/icon-32.png" />
-    <link rel="icon" type="image/jpeg" sizes="192x192" href="icons/icon-192.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="icons/favicon.svg"
+    />
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="FAYAD" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/icon-32.png"
+    />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Abdullhamid Fayad | Front-End Developer" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/icon-192.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/icon-180.png"
+    />
+
+    <meta
+      name="apple-mobile-web-app-capable"
+      content="yes"
+    />
+
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta
+      name="apple-mobile-web-app-title"
+      content="FAYAD"
+    />
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+      property="og:locale"
+      content="ar_EG"
+    />
+
+    <meta
+      property="og:title"
+      content="عبد الحميد فياض | Front-End Developer"
+    />
+
     <meta
       property="og:description"
-      content="Front-End Developer focused on building thoughtful and responsive web experiences." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://abdullhamid-fayad-portfolio.vercel.app/" />
-    <meta property="og:image" content="https://abdullhamid-fayad-portfolio.vercel.app/profile.jpg" />
+      content="Portfolio of Abdullhamid Fayad — Front-End Developer and Computer Engineering Student building modern, responsive web experiences."
+    />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:url"
+      content="https://abdullhamid-fayad-portfolio.vercel.app/"
+    />
+
+    <meta
+      property="og:site_name"
+      content="Abdullhamid Fayad"
+    />
+
+    <meta
+      property="og:image"
+      content="https://abdullhamid-fayad-portfolio.vercel.app/profile.jpg"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Abdullhamid Fayad — Front-End Developer"
+    />
+
+    <meta
+      property="og:image:type"
+      content="image/jpeg"
+    />
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="عبد الحميد فياض | Front-End Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Front-End Developer and Computer Engineering Student building modern and responsive web experiences."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://abdullhamid-fayad-portfolio.vercel.app/profile.jpg"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Abdullhamid Fayad — Front-End Developer"
+    />
+
+    <!-- =====================================================
+         PERFORMANCE / FONTS
+    ====================================================== -->
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
 
-    <!-- Vercel Analytics -->
+    <link
+      rel="preload"
+      as="image"
+      href="profile.jpg"
+      fetchpriority="high"
+    />
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdullhamid Fayad",
+        "alternateName": [
+          "عبد الحميد فياض",
+          "Abdulhamid Fayad",
+          "Fayad"
+        ],
+        "url": "https://abdullhamid-fayad-portfolio.vercel.app/",
+        "image": "https://abdullhamid-fayad-portfolio.vercel.app/profile.jpg",
+        "jobTitle": "Front-End Developer",
+        "description": "Front-End Developer and Computer Engineering Student focused on building modern and responsive web experiences.",
+        "sameAs": [
+          "https://github.com/midofayad22",
+          "https://www.linkedin.com/in/abdullhamid-f-800bb5379",
+          "https://www.instagram.com/abdullhamid_fayad22",
+          "https://youtube.com/@abdullhamid-mido22",
+          "https://www.tiktok.com/@abdullhamid_fayad"
+        ],
+        "knowsAbout": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Responsive Web Design",
+          "UI Design",
+          "Front-End Development",
+          "Progressive Web Apps",
+          "Git",
+          "GitHub",
+          "React",
+          "TypeScript"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Abdullhamid Fayad Portfolio",
+        "alternateName": "FAYAD Portfolio",
+        "url": "https://abdullhamid-fayad-portfolio.vercel.app/",
+        "inLanguage": "ar-EG",
+        "author": {
+          "@type": "Person",
+          "name": "Abdullhamid Fayad"
+        }
+      }
+    </script>
+
+    <!-- =====================================================
+         VERCEL ANALYTICS
+    ====================================================== -->
+
     <script>
       window.va =
         window.va ||
@@ -58,17 +280,33 @@
         };
     </script>
 
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script
+      defer
+      src="/_vercel/insights/script.js"
+    ></script>
   </head>
 
   <body>
+
     <!-- =====================================================
-       LOADER
-  ====================================================== -->
-    <div class="page-loader" id="pageLoader" aria-hidden="true">
+         LOADER
+    ====================================================== -->
+
+    <div
+      class="page-loader"
+      id="pageLoader"
+      aria-hidden="true"
+    >
       <div class="loader-inner">
-        <img src="icons/favicon.svg" alt="FAYAD" />
+        <img
+          src="icons/favicon.svg"
+          alt=""
+          width="48"
+          height="48"
+        />
+
         <span>FAYAD</span>
+
         <div class="loader-progress">
           <span></span>
         </div>
@@ -76,27 +314,52 @@
     </div>
 
     <!-- =====================================================
-       CURSOR TRAIL
-  ====================================================== -->
-    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+         CURSOR TRAIL
+    ====================================================== -->
+
+    <div
+      class="cursor-trail"
+      id="cursorTrail"
+      aria-hidden="true"
+    ></div>
 
     <!-- =====================================================
-       BACKGROUND
-  ====================================================== -->
-    <div class="site-background" aria-hidden="true">
+         BACKGROUND
+    ====================================================== -->
+
+    <div
+      class="site-background"
+      aria-hidden="true"
+    >
       <div class="background-grid"></div>
+
       <div class="background-glow background-glow-one"></div>
+
       <div class="background-glow background-glow-two"></div>
     </div>
 
     <!-- =====================================================
-       HEADER
-  ====================================================== -->
-    <header class="site-header" id="siteHeader">
+         HEADER
+    ====================================================== -->
+
+    <header
+      class="site-header"
+      id="siteHeader"
+    >
       <div class="header-inner">
-        <a href="#top" class="brand" aria-label="FAYAD - Home">
+
+        <a
+          href="#top"
+          class="brand"
+          aria-label="FAYAD - Home"
+        >
           <span class="brand-mark">
-            <img src="icons/favicon.svg" alt="" />
+            <img
+              src="icons/favicon.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
           </span>
 
           <span class="brand-text">
@@ -105,34 +368,63 @@
           </span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#about" class="nav-link active" data-section="about">
+        <nav
+          class="main-nav"
+          aria-label="Main navigation"
+        >
+          <a
+            href="#about"
+            class="nav-link active"
+            data-section="about"
+            aria-current="page"
+          >
             <span>01</span>
             About
           </a>
 
-          <a href="#skills" class="nav-link" data-section="skills">
+          <a
+            href="#skills"
+            class="nav-link"
+            data-section="skills"
+          >
             <span>02</span>
             Skills
           </a>
 
-          <a href="#projects" class="nav-link" data-section="projects">
+          <a
+            href="#projects"
+            class="nav-link"
+            data-section="projects"
+          >
             <span>03</span>
             Projects
           </a>
 
-          <a href="gallery.html" class="nav-link">
+          <a
+            href="gallery.html"
+            class="nav-link"
+          >
             <span>04</span>
             Gallery
           </a>
 
-          <a href="#contact" class="nav-link" data-section="contact">
+          <a
+            href="#contact"
+            class="nav-link"
+            data-section="contact"
+          >
             <span>05</span>
             Contact
           </a>
         </nav>
 
-        <a href="https://wa.me/201091573063" target="_blank" rel="noopener noreferrer" class="header-contact">
+        <a
+          href="https://wa.me/201091573063"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="header-contact"
+          aria-label="Contact Abdullhamid Fayad on WhatsApp"
+        >
           <span>Let's talk</span>
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
@@ -143,29 +435,42 @@
           type="button"
           aria-label="Open menu"
           aria-expanded="false"
-          aria-controls="mobileMenu">
+          aria-controls="mobileMenu"
+        >
           <span></span>
           <span></span>
         </button>
       </div>
 
-      <div class="mobile-menu" id="mobileMenu">
+      <div
+        class="mobile-menu"
+        id="mobileMenu"
+      >
         <div class="mobile-menu-head">
           <span>MENU</span>
           <span>FAYAD / 2026</span>
         </div>
 
-        <a href="#about" data-section="about">
+        <a
+          href="#about"
+          data-section="about"
+        >
           <span>About</span>
           <small>01</small>
         </a>
 
-        <a href="#skills" data-section="skills">
+        <a
+          href="#skills"
+          data-section="skills"
+        >
           <span>Skills</span>
           <small>02</small>
         </a>
 
-        <a href="#projects" data-section="projects">
+        <a
+          href="#projects"
+          data-section="projects"
+        >
           <span>Projects</span>
           <small>03</small>
         </a>
@@ -175,7 +480,10 @@
           <small>04</small>
         </a>
 
-        <a href="#contact" data-section="contact">
+        <a
+          href="#contact"
+          data-section="contact"
+        >
           <span>Contact</span>
           <small>05</small>
         </a>
@@ -183,15 +491,24 @@
     </header>
 
     <!-- =====================================================
-       MAIN
-  ====================================================== -->
-    <main id="top">
-      <!-- =====================================================
-         HERO
+         MAIN
     ====================================================== -->
-      <section class="hero section" id="about">
+
+    <main id="top">
+
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section
+        class="hero section"
+        id="about"
+        aria-labelledby="hero-title"
+      >
         <div class="container hero-grid">
+
           <div class="hero-content">
+
             <div class="eyebrow reveal">
               <span class="eyebrow-dot"></span>
               FRONT-END DEVELOPER
@@ -203,34 +520,59 @@
               <span>PORTFOLIO / 2026</span>
             </div>
 
-            <h1 class="hero-title reveal">
-              <span class="hero-title-small">عبد الحميد</span>
+            <h1
+              class="hero-title reveal"
+              id="hero-title"
+            >
+              <span class="hero-title-small">
+                عبد الحميد
+              </span>
 
-              <span class="hero-name">فياض</span>
+              <span class="hero-name">
+                فياض
+              </span>
 
-              <span class="hero-name-accent">.</span>
+              <span class="hero-name-accent">
+                .
+              </span>
             </h1>
 
             <div class="hero-role reveal">
               <span>I BUILD</span>
+
               <span class="role-divider"></span>
-              <strong id="typingRole">Front-End Experiences</strong>
+
+              <strong id="typingRole">
+                Front-End Experiences
+              </strong>
             </div>
 
             <p class="hero-description reveal">
-              أبني واجهات ويب واضحة ومتجاوبة، وأهتم بأن يكون الكود والتصميم والتفاعل جزءًا من تجربة واحدة.
+              أبني واجهات ويب حديثة ومتجاوبة تجمع بين
+              التصميم الواضح، الكود المنظم، والأداء الجيد،
+              مع اهتمام حقيقي بتجربة المستخدم والتفاصيل البصرية.
             </p>
 
             <div class="hero-actions reveal">
-              <a href="#projects" class="button button-primary" data-section="projects">
+
+              <a
+                href="#projects"
+                class="button button-primary"
+                data-section="projects"
+              >
                 <span>مشاهدة المشاريع</span>
                 <i class="fa-solid fa-arrow-left"></i>
               </a>
 
-              <a href="#contact" class="button button-secondary" data-section="contact">
+              <a
+                href="#contact"
+                class="button button-secondary"
+                data-section="contact"
+              >
                 <span>تواصل</span>
                 <i class="fa-regular fa-paper-plane"></i>
               </a>
+
             </div>
 
             <div class="hero-tech reveal">
@@ -240,17 +582,20 @@
               <span>Git</span>
               <span>PWA</span>
             </div>
+
           </div>
 
           <!-- HERO VISUAL -->
 
           <div class="hero-visual reveal">
+
             <div class="visual-label">
               <span>FAYAD</span>
               <span>01</span>
             </div>
 
             <div class="profile-card">
+
               <div class="profile-card-top">
                 <span>ABDULLHAMID FAYAD</span>
 
@@ -261,12 +606,17 @@
               </div>
 
               <div class="profile-image-wrap">
+
                 <img
                   src="profile.jpg"
-                  alt="Abdullhamid Fayad"
+                  alt="Abdullhamid Fayad — Front-End Developer"
                   class="profile-image"
+                  width="720"
+                  height="900"
                   loading="eager"
-                  fetchpriority="high" />
+                  fetchpriority="high"
+                  decoding="async"
+                />
 
                 <div class="profile-overlay"></div>
 
@@ -274,9 +624,11 @@
                   <span>FRONT-END</span>
                   <strong>FAYAD</strong>
                 </div>
+
               </div>
 
               <div class="profile-card-bottom">
+
                 <div>
                   <small>FOCUS</small>
                   <strong>Web Development</strong>
@@ -286,10 +638,11 @@
                   <small>BASED IN</small>
                   <strong>Egypt</strong>
                 </div>
+
               </div>
+
             </div>
 
-            <!-- Purposeful side rail -->
             <div class="hero-note">
               <span>DESIGN</span>
               <i>×</i>
@@ -299,7 +652,9 @@
             </div>
 
             <div class="hero-code-card">
+
               <div class="code-header">
+
                 <div class="code-dots">
                   <span></span>
                   <span></span>
@@ -307,9 +662,11 @@
                 </div>
 
                 <small>developer.js</small>
+
               </div>
 
               <div class="code-body">
+
                 <p>
                   <span class="code-keyword">const</span>
                   <span class="code-name">focus</span>
@@ -333,14 +690,17 @@
                 <p class="code-indent">
                   <span>}</span>
                 </p>
+
               </div>
             </div>
+
           </div>
         </div>
 
         <div class="container hero-bottom">
+
           <div class="hero-stat reveal">
-            <strong>03</strong>
+            <strong>04</strong>
             <span>Selected Projects</span>
           </div>
 
@@ -353,22 +713,30 @@
             <strong>100%</strong>
             <span>Front-End Focus</span>
           </div>
+
         </div>
       </section>
 
       <!-- =====================================================
-         ABOUT
-    ====================================================== -->
+           ABOUT
+      ====================================================== -->
+
       <section class="about-section section">
+
         <div class="container">
+
           <div class="about-layout">
+
             <div class="section-marker reveal">
               <span>02</span>
               <small>ABOUT</small>
             </div>
 
             <div class="about-content">
-              <span class="section-index reveal">ABOUT / APPROACH</span>
+
+              <span class="section-index reveal">
+                ABOUT / APPROACH
+              </span>
 
               <h2 class="reveal">
                 الواجهة الجيدة لا تبدأ بالكود، بل بطريقة
@@ -376,12 +744,19 @@
               </h2>
 
               <div class="about-copy reveal">
+
                 <p>
-                  أتعلم تطوير الويب من خلال بناء مشاريع فعلية، مع اهتمام خاص بالـResponsive Design وتنظيم الواجهة
-                  والتفاصيل البصرية.
+                  أتعلم تطوير الويب من خلال بناء مشاريع فعلية،
+                  مع اهتمام خاص بالـResponsive Design وتنظيم
+                  الواجهة والتفاصيل البصرية.
                 </p>
 
-                <p>هدفي أن تكون النتيجة بسيطة في الاستخدام، قوية بصريًا، ومبنية بطريقة يمكن تطويرها لاحقًا.</p>
+                <p>
+                  أركز على تحويل الأفكار إلى تجارب واضحة
+                  وسريعة وسهلة الاستخدام، مع كتابة كود يمكن
+                  تطويره وتحسينه لاحقًا.
+                </p>
+
               </div>
 
               <div class="about-meta reveal">
@@ -389,41 +764,69 @@
                 <span>BUILD</span>
                 <span>REFINE</span>
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         SKILLS
-    ====================================================== -->
-      <section class="skills-section section" id="skills">
+           SKILLS
+      ====================================================== -->
+
+      <section
+        class="skills-section section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
         <div class="container">
+
           <div class="section-heading reveal">
+
             <div>
-              <span class="section-index">03 / SKILLS</span>
-              <h2>Core toolkit</h2>
+
+              <span class="section-index">
+                03 / SKILLS
+              </span>
+
+              <h2 id="skills-title">
+                Core toolkit
+              </h2>
+
             </div>
 
-            <p>الأدوات التي أستخدمها حاليًا لبناء واجهات الويب.</p>
+            <p>
+              الأدوات والتقنيات التي أستخدمها حاليًا لبناء
+              واجهات الويب وتطوير مشاريعي.
+            </p>
+
           </div>
 
           <div class="skills-grid">
+
             <article class="skill-card skill-feature reveal">
+
               <div class="skill-card-top">
                 <span>01</span>
                 <i class="fa-solid fa-code"></i>
               </div>
 
               <div class="skill-card-main">
-                <span class="skill-kicker">CORE</span>
+
+                <span class="skill-kicker">
+                  CORE
+                </span>
 
                 <h3>
                   Front-End
                   <span>Development</span>
                 </h3>
 
-                <p>بناء واجهات Responsive باستخدام HTML وCSS وJavaScript.</p>
+                <p>
+                  بناء واجهات Responsive باستخدام HTML وCSS
+                  وJavaScript مع الاهتمام بالتنظيم والتجربة.
+                </p>
+
               </div>
 
               <div class="skill-tags">
@@ -432,48 +835,70 @@
                 <span>JavaScript</span>
                 <span>Responsive</span>
               </div>
+
             </article>
 
             <article class="skill-card reveal">
+
               <div class="skill-card-top">
                 <span>02</span>
                 <div class="skill-letter">JS</div>
               </div>
 
-              <span class="skill-kicker">INTERACTION</span>
+              <span class="skill-kicker">
+                INTERACTION
+              </span>
 
               <h3>JavaScript</h3>
 
-              <p>DOM، Events، Logic والتفاعل داخل صفحات الويب.</p>
+              <p>
+                DOM، Events، Logic والتفاعل داخل صفحات الويب.
+              </p>
 
               <div class="skill-line"></div>
+
             </article>
 
             <article class="skill-card reveal">
+
               <div class="skill-card-top">
                 <span>03</span>
                 <i class="fa-brands fa-git-alt"></i>
               </div>
 
-              <span class="skill-kicker">WORKFLOW</span>
+              <span class="skill-kicker">
+                WORKFLOW
+              </span>
 
               <h3>Git & GitHub</h3>
 
-              <p>تنظيم المشاريع وتتبع التعديلات وإدارة نسخ الكود.</p>
+              <p>
+                تنظيم المشاريع وتتبع التعديلات وإدارة نسخ الكود.
+              </p>
 
               <div class="skill-line"></div>
+
             </article>
 
             <article class="skill-card skill-wide reveal">
+
               <div class="skill-wide-content">
-                <span class="skill-kicker">04 / VISUAL THINKING</span>
+
+                <span class="skill-kicker">
+                  04 / VISUAL THINKING
+                </span>
 
                 <h3>
                   UI, Layout
                   <span>& Visual Design</span>
                 </h3>
 
-                <p>اهتمام بالـTypography والمساحات والتباين والـVisual Hierarchy لبناء واجهة متوازنة وواضحة.</p>
+                <p>
+                  اهتمام بالـTypography والمساحات والتباين
+                  والـVisual Hierarchy لبناء واجهة متوازنة
+                  وواضحة.
+                </p>
+
               </div>
 
               <div class="visual-type-card">
@@ -481,115 +906,182 @@
                 <strong>Aa</strong>
                 <small>LAYOUT</small>
               </div>
+
             </article>
 
             <article class="skill-card reveal">
+
               <div class="skill-card-top">
                 <span>05</span>
                 <i class="fa-solid fa-mobile-screen-button"></i>
               </div>
 
-              <span class="skill-kicker">EXPERIENCE</span>
+              <span class="skill-kicker">
+                EXPERIENCE
+              </span>
 
               <h3>Responsive UI</h3>
 
-              <p>واجهات تعمل بشكل مريح على الهاتف والتابلت والـDesktop.</p>
+              <p>
+                واجهات تعمل بشكل مريح على الهاتف والتابلت
+                والـDesktop.
+              </p>
 
               <div class="skill-line"></div>
+
             </article>
 
             <article class="skill-card reveal">
+
               <div class="skill-card-top">
                 <span>06</span>
                 <i class="fa-solid fa-gauge-high"></i>
               </div>
 
-              <span class="skill-kicker">QUALITY</span>
+              <span class="skill-kicker">
+                QUALITY
+              </span>
 
               <h3>Performance</h3>
 
-              <p>تقليل العناصر والتأثيرات غير الضرورية للحفاظ على تجربة خفيفة.</p>
+              <p>
+                تقليل العناصر والتأثيرات غير الضرورية للحفاظ
+                على تجربة خفيفة وسريعة.
+              </p>
 
               <div class="skill-line"></div>
+
             </article>
+
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         EDUCATION
-    ====================================================== -->
+           EDUCATION
+      ====================================================== -->
+
       <section class="education-section section">
+
         <div class="container">
+
           <div class="education-card reveal">
+
             <div class="education-meta">
-              <span class="section-index">04 / EDUCATION</span>
+
+              <span class="section-index">
+                04 / EDUCATION
+              </span>
 
               <div class="education-icon">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
+
             </div>
 
             <div class="education-main">
+
               <span>TANTA UNIVERSITY</span>
 
               <h2>Faculty of Engineering</h2>
 
               <h3>Computer Engineering</h3>
 
-              <p>هندسة الحاسبات — مع تركيز حالي على تطوير الويب والـFront-End.</p>
+              <p>
+                هندسة الحاسبات — مع تركيز حالي على تطوير الويب
+                والـFront-End وبناء المشاريع العملية.
+              </p>
+
             </div>
 
             <div class="education-focus">
+
               <small>CURRENT FOCUS</small>
 
               <strong>Front-End</strong>
 
               <span>Web Development</span>
+
             </div>
+
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         PROJECTS
-    ====================================================== -->
-      <section class="projects-section section" id="projects">
+           PROJECTS
+      ====================================================== -->
+
+      <section
+        class="projects-section section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+
         <div class="container">
+
           <div class="section-heading reveal">
+
             <div>
-              <span class="section-index">05 / SELECTED WORK</span>
-              <h2>Projects</h2>
+
+              <span class="section-index">
+                05 / SELECTED WORK
+              </span>
+
+              <h2 id="projects-title">
+                Projects
+              </h2>
+
             </div>
 
-            <p>مشاريع مبنية للتطبيق، التجربة، وتحويل الأفكار إلى واجهات حقيقية.</p>
+            <p>
+              مشاريع مبنية للتطبيق، التجربة، وتحويل الأفكار
+              إلى واجهات ومنتجات ويب حقيقية.
+            </p>
+
           </div>
 
-          <!-- FEATURED -->
+          <!-- =================================================
+               FEATURED PROJECT / 01
+          ================================================== -->
 
           <article class="featured-project reveal">
+
             <div class="featured-top">
+
               <div>
-                <span class="project-index"> FEATURED / 01 </span>
+
+                <span class="project-index">
+                  FEATURED / 01
+                </span>
 
                 <h3>
                   FAYAD
                   <strong>Learning</strong>
                 </h3>
+
               </div>
 
-              <span class="project-year">2026</span>
+              <span class="project-year">
+                2026
+              </span>
+
             </div>
 
             <div class="featured-body">
+
               <a
                 href="https://fayad-learning.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="learning-preview"
-                aria-label="Open FAYAD Learning">
+                aria-label="Open FAYAD Learning project"
+              >
+
                 <div class="browser-window">
+
                   <div class="browser-bar">
+
                     <div class="browser-dots">
                       <span></span>
                       <span></span>
@@ -600,11 +1092,16 @@
                       <i class="fa-solid fa-lock"></i>
                       fayad-learning.vercel.app
                     </div>
+
                   </div>
 
                   <div class="learning-screen">
+
                     <aside class="learning-sidebar">
-                      <div class="learning-logo">F</div>
+
+                      <div class="learning-logo">
+                        F
+                      </div>
 
                       <span class="learning-side active">
                         <i class="fa-solid fa-house"></i>
@@ -621,9 +1118,11 @@
                       <span class="learning-side">
                         <i class="fa-solid fa-circle-question"></i>
                       </span>
+
                     </aside>
 
                     <div class="learning-content">
+
                       <div class="learning-nav">
                         <span>LEARN</span>
                         <span>PRACTICE</span>
@@ -632,6 +1131,7 @@
                       </div>
 
                       <div class="learning-welcome">
+
                         <small>WELCOME TO</small>
 
                         <h4>
@@ -639,10 +1139,14 @@
                           <span>Learning</span>
                         </h4>
 
-                        <p>Learn. Practice. Build.</p>
+                        <p>
+                          Learn. Practice. Build.
+                        </p>
+
                       </div>
 
                       <div class="learning-mini-cards">
+
                         <div>
                           <small>01</small>
                           <strong>HTML</strong>
@@ -660,9 +1164,11 @@
                           <strong>JS</strong>
                           <span>Logic</span>
                         </div>
+
                       </div>
 
                       <div class="learning-progress">
+
                         <div>
                           <span>LEARNING PROGRESS</span>
                           <strong>72%</strong>
@@ -671,7 +1177,9 @@
                         <span class="progress-track">
                           <span></span>
                         </span>
+
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -679,16 +1187,22 @@
                 <span class="preview-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </span>
+
               </a>
 
               <div class="featured-info">
-                <span class="project-kicker"> INTERACTIVE LEARNING PLATFORM </span>
+
+                <span class="project-kicker">
+                  INTERACTIVE LEARNING PLATFORM
+                </span>
 
                 <p class="project-description">
-                  منصة تعليمية تفاعلية تجمع بين التعلم والممارسة والاختبارات والتجربة العملية.
+                  منصة تعليمية تفاعلية تجمع بين التعلم والممارسة
+                  والاختبارات والتجربة العملية في تجربة واحدة.
                 </p>
 
                 <div class="project-features">
+
                   <span>
                     <i class="fa-solid fa-check"></i>
                     Interactive lessons
@@ -708,6 +1222,7 @@
                     <i class="fa-solid fa-check"></i>
                     PWA experience
                   </span>
+
                 </div>
 
                 <div class="project-tags">
@@ -722,161 +1237,681 @@
                   href="https://fayad-learning.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="project-link">
+                  class="project-link"
+                >
                   <span>Visit project</span>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
+
               </div>
             </div>
           </article>
 
-          <!-- OTHER PROJECTS -->
+          <!-- =================================================
+               FEATURED PROJECT / 02 — TNU HUB
+          ================================================== -->
+
+          <article
+            class="featured-project tnu-featured reveal"
+          >
+
+            <div class="featured-top">
+
+              <div>
+
+                <span class="project-index">
+                  FEATURED / 02
+                </span>
+
+                <h3>
+                  TNU
+                  <strong>Hub</strong>
+                </h3>
+
+              </div>
+
+              <span class="project-year">
+                2026
+              </span>
+
+            </div>
+
+            <div class="featured-body">
+
+              <a
+                href="https://tnu-hub.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tnu-preview"
+                aria-label="Open TNU Hub project"
+              >
+
+                <div class="tnu-browser-window">
+
+                  <!-- Browser -->
+
+                  <div class="tnu-browser-bar">
+
+                    <div class="tnu-browser-dots">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+
+                    <div class="tnu-browser-address">
+                      <i class="fa-solid fa-lock"></i>
+                      tnu-hub.vercel.app
+                    </div>
+
+                  </div>
+
+                  <!-- App -->
+
+                  <div class="tnu-screen">
+
+                    <!-- Sidebar -->
+
+                    <aside class="tnu-sidebar">
+
+                      <div class="tnu-logo-mark">
+                        <span>T</span>
+                      </div>
+
+                      <div class="tnu-sidebar-item active">
+                        <i class="fa-solid fa-house"></i>
+                      </div>
+
+                      <div class="tnu-sidebar-item">
+                        <i class="fa-solid fa-bullhorn"></i>
+                      </div>
+
+                      <div class="tnu-sidebar-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                      </div>
+
+                      <div class="tnu-sidebar-item">
+                        <i class="fa-solid fa-folder-open"></i>
+                      </div>
+
+                      <div class="tnu-sidebar-item">
+                        <i class="fa-solid fa-file-circle-question"></i>
+                      </div>
+
+                      <div class="tnu-sidebar-spacer"></div>
+
+                      <div class="tnu-sidebar-item">
+                        <i class="fa-solid fa-gear"></i>
+                      </div>
+
+                    </aside>
+
+                    <!-- Main -->
+
+                    <div class="tnu-main">
+
+                      <!-- Topbar -->
+
+                      <div class="tnu-topbar">
+
+                        <div class="tnu-page-title">
+                          <span>TNU HUB</span>
+                          <strong>Student Space</strong>
+                        </div>
+
+                        <div class="tnu-top-actions">
+
+                          <span class="tnu-notification">
+                            <i class="fa-regular fa-bell"></i>
+                            <b></b>
+                          </span>
+
+                          <span class="tnu-avatar">
+                            F
+                          </span>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Welcome -->
+
+                      <div class="tnu-welcome">
+
+                        <div>
+
+                          <small>
+                            STUDENT DASHBOARD
+                          </small>
+
+                          <h4>
+                            Welcome to
+                            <span>TNU Hub</span>
+                          </h4>
+
+                          <p>
+                            Everything you need, in one place.
+                          </p>
+
+                        </div>
+
+                        <div class="tnu-date">
+                          2026
+                        </div>
+
+                      </div>
+
+                      <!-- Stats -->
+
+                      <div class="tnu-stat-grid">
+
+                        <div class="tnu-stat-card">
+
+                          <div class="tnu-stat-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                          </div>
+
+                          <div>
+                            <small>ANNOUNCEMENTS</small>
+                            <strong>12</strong>
+                          </div>
+
+                        </div>
+
+                        <div class="tnu-stat-card">
+
+                          <div class="tnu-stat-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                          </div>
+
+                          <div>
+                            <small>EVENTS</small>
+                            <strong>08</strong>
+                          </div>
+
+                        </div>
+
+                        <div class="tnu-stat-card">
+
+                          <div class="tnu-stat-icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                          </div>
+
+                          <div>
+                            <small>RESOURCES</small>
+                            <strong>24</strong>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Lower Content -->
+
+                      <div class="tnu-dashboard-grid">
+
+                        <!-- Announcements -->
+
+                        <div class="tnu-panel">
+
+                          <div class="tnu-panel-head">
+
+                            <div>
+                              <small>LATEST</small>
+                              <strong>Announcements</strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                          </div>
+
+                          <div class="tnu-announcement">
+
+                            <span class="tnu-announcement-dot"></span>
+
+                            <div>
+                              <strong>
+                                Important student update
+                              </strong>
+
+                              <small>
+                                University announcements
+                              </small>
+                            </div>
+
+                          </div>
+
+                          <div class="tnu-announcement">
+
+                            <span class="tnu-announcement-dot"></span>
+
+                            <div>
+                              <strong>
+                                Registration information
+                              </strong>
+
+                              <small>
+                                Academic updates
+                              </small>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <!-- Events -->
+
+                        <div class="tnu-panel">
+
+                          <div class="tnu-panel-head">
+
+                            <div>
+                              <small>UPCOMING</small>
+                              <strong>Events</strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                          </div>
+
+                          <div class="tnu-event">
+
+                            <div class="tnu-event-date">
+                              <strong>18</strong>
+                              <small>SEP</small>
+                            </div>
+
+                            <div>
+                              <strong>
+                                Student activity
+                              </strong>
+
+                              <small>
+                                TNU Campus
+                              </small>
+                            </div>
+
+                          </div>
+
+                          <div class="tnu-event">
+
+                            <div class="tnu-event-date">
+                              <strong>24</strong>
+                              <small>SEP</small>
+                            </div>
+
+                            <div>
+                              <strong>
+                                Academic event
+                              </strong>
+
+                              <small>
+                                Engineering
+                              </small>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <span class="tnu-preview-arrow">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </span>
+
+                <span class="tnu-preview-label">
+                  STUDENT PLATFORM / REACT / PWA
+                </span>
+
+              </a>
+
+              <div class="featured-info">
+
+                <span class="project-kicker">
+                  UNIVERSITY STUDENT PLATFORM
+                </span>
+
+                <p class="project-description">
+                  منصة طلابية رقمية صممت لتجميع الإعلانات،
+                  الفعاليات، الموارد والخدمات في تجربة واحدة
+                  للطلاب، مع نظام إدارة وصلاحيات متعدد المستويات.
+                </p>
+
+                <div class="project-features">
+
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                    Student platform
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                    Admin dashboard
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                    Supabase backend
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                    Responsive PWA
+                  </span>
+
+                </div>
+
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Supabase</span>
+                  <span>PWA</span>
+                  <span>Responsive UI</span>
+                </div>
+
+                <a
+                  href="https://tnu-hub.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                >
+                  <span>Visit project</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- =================================================
+               OTHER PROJECTS
+          ================================================== -->
 
           <div class="projects-grid">
+
+            <!-- ELOMDA -->
+
             <a
               href="https://elomda-fayad-trucks.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-card project-elomda reveal">
+              class="project-card project-elomda reveal"
+              aria-label="Open Elomda Fayad Trucks project"
+            >
+
               <div class="project-visual">
-                <span class="project-number">02</span>
+
+                <span class="project-number">
+                  03
+                </span>
 
                 <div class="project-orb">
+
                   <div class="truck-brand">
                     <span>ELOMDA</span>
                     <strong>TRUCKS</strong>
                   </div>
+
                 </div>
 
-                <span class="project-visual-label"> INDUSTRIAL / PRODUCT </span>
+                <span class="project-visual-label">
+                  INDUSTRIAL / PRODUCT
+                </span>
+
               </div>
 
               <div class="project-card-content">
+
                 <div>
-                  <span class="project-kicker"> PRODUCT WEBSITE </span>
 
-                  <h3>Elomda Fayad Trucks</h3>
+                  <span class="project-kicker">
+                    PRODUCT WEBSITE
+                  </span>
 
-                  <p>واجهة تجارية بهوية قوية وتركيز على عرض المنتجات بوضوح.</p>
+                  <h3>
+                    Elomda Fayad Trucks
+                  </h3>
+
+                  <p>
+                    واجهة تجارية بهوية قوية وتركيز على عرض
+                    المنتجات بوضوح وتنظيم.
+                  </p>
+
                 </div>
 
                 <span class="project-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </span>
+
               </div>
 
-              <div class="project-footer">HTML / CSS / JavaScript</div>
+              <div class="project-footer">
+                HTML / CSS / JavaScript
+              </div>
+
             </a>
+
+            <!-- FAYAD TRUCKS -->
 
             <a
               href="https://fayad-trucks.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-card project-fayad-trucks reveal">
+              class="project-card project-fayad-trucks reveal"
+              aria-label="Open FAYAD Trucks project"
+            >
+
               <div class="project-visual">
-                <span class="project-number">03</span>
+
+                <span class="project-number">
+                  04
+                </span>
 
                 <div class="project-orb">
+
                   <div class="truck-brand">
                     <span>FAYAD</span>
                     <strong>TRUCKS</strong>
                   </div>
+
                 </div>
 
-                <span class="project-visual-label"> RESPONSIVE / UI </span>
+                <span class="project-visual-label">
+                  RESPONSIVE / UI
+                </span>
+
               </div>
 
               <div class="project-card-content">
+
                 <div>
-                  <span class="project-kicker"> RESPONSIVE UI </span>
 
-                  <h3>FAYAD Trucks</h3>
+                  <span class="project-kicker">
+                    RESPONSIVE UI
+                  </span>
 
-                  <p>تجربة مباشرة لعرض المنتجات مع اهتمام بترتيب المحتوى وسهولة التصفح.</p>
+                  <h3>
+                    FAYAD Trucks
+                  </h3>
+
+                  <p>
+                    تجربة مباشرة لعرض المنتجات مع اهتمام
+                    بترتيب المحتوى وسهولة التصفح.
+                  </p>
+
                 </div>
 
                 <span class="project-arrow">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </span>
+
               </div>
 
-              <div class="project-footer">HTML / CSS / JavaScript</div>
+              <div class="project-footer">
+                HTML / CSS / JavaScript
+              </div>
+
             </a>
+
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         VISUAL WORK
-    ====================================================== -->
+           VISUAL WORK
+      ====================================================== -->
+
       <section class="visual-section section">
+
         <div class="container">
+
           <div class="visual-heading reveal">
+
             <div>
-              <span class="section-index">06 / VISUAL WORK</span>
+
+              <span class="section-index">
+                06 / VISUAL WORK
+              </span>
 
               <h2>
                 Beyond
                 <span>code.</span>
               </h2>
 
-              <p>جانب بصري يضيف حسًا بالتكوين، الألوان، والمساحات إلى طريقة بناء الواجهات.</p>
+              <p>
+                جانب بصري يضيف حسًا بالتكوين، الألوان،
+                والمساحات إلى طريقة بناء الواجهات.
+              </p>
 
-              <a href="gallery.html" class="gallery-link">
+              <a
+                href="gallery.html"
+                class="gallery-link"
+              >
                 Explore the gallery
                 <i class="fa-solid fa-arrow-left"></i>
               </a>
+
             </div>
 
             <div class="visual-count">
+
               <strong>54+</strong>
-              <span>VISUAL<br />WORKS</span>
+
+              <span>
+                VISUAL
+                <br />
+                WORKS
+              </span>
+
             </div>
+
           </div>
 
           <div class="visual-gallery">
-            <a href="gallery.html" class="gallery-image gallery-large reveal">
-              <img src="assets/images/photo1.jpg" alt="Visual work 01" loading="lazy" />
+
+            <a
+              href="gallery.html"
+              class="gallery-image gallery-large reveal"
+              aria-label="Open visual gallery"
+            >
+
+              <img
+                src="assets/images/photo1.jpg"
+                alt="Visual work 01"
+                loading="lazy"
+                decoding="async"
+              />
+
               <span>01</span>
+
             </a>
 
-            <a href="gallery.html" class="gallery-image reveal">
-              <img src="assets/images/photo2.jpg" alt="Visual work 02" loading="lazy" />
+            <a
+              href="gallery.html"
+              class="gallery-image reveal"
+              aria-label="Open visual gallery"
+            >
+
+              <img
+                src="assets/images/photo2.jpg"
+                alt="Visual work 02"
+                loading="lazy"
+                decoding="async"
+              />
+
               <span>02</span>
+
             </a>
 
-            <a href="gallery.html" class="gallery-image reveal">
-              <img src="assets/images/photo3.jpg" alt="Visual work 03" loading="lazy" />
+            <a
+              href="gallery.html"
+              class="gallery-image reveal"
+              aria-label="Open visual gallery"
+            >
+
+              <img
+                src="assets/images/photo3.jpg"
+                alt="Visual work 03"
+                loading="lazy"
+                decoding="async"
+              />
+
               <span>03</span>
+
             </a>
+
           </div>
         </div>
       </section>
 
       <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-      <section class="contact-section section" id="contact">
-        <div class="container">
-          <div class="contact-intro reveal">
-            <div>
-              <span class="section-index">07 / CONTACT</span>
+           CONTACT
+      ====================================================== -->
 
-              <h2>
+      <section
+        class="contact-section section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+
+        <div class="container">
+
+          <div class="contact-intro reveal">
+
+            <div>
+
+              <span class="section-index">
+                07 / CONTACT
+              </span>
+
+              <h2 id="contact-title">
                 Have a project?
                 <span>Let's talk.</span>
               </h2>
+
             </div>
 
-            <p>مشروع، فكرة، أو تعاون؟ اختر الطريقة المناسبة للتواصل.</p>
+            <p>
+              مشروع، فكرة، أو تعاون؟
+              اختر الطريقة المناسبة للتواصل.
+            </p>
+
           </div>
 
           <div class="contact-grid">
+
             <a
               href="https://github.com/midofayad22"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card github">
+              class="contact-card github"
+              aria-label="Visit Abdullhamid Fayad on GitHub"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-github"></i>
               </span>
@@ -887,13 +1922,17 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
 
             <a
               href="https://www.linkedin.com/in/abdullhamid-f-800bb5379"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card linkedin">
+              class="contact-card linkedin"
+              aria-label="Visit Abdullhamid Fayad on LinkedIn"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-linkedin-in"></i>
               </span>
@@ -904,13 +1943,17 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
 
             <a
               href="https://www.instagram.com/abdullhamid_fayad22"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card instagram">
+              class="contact-card instagram"
+              aria-label="Visit Abdullhamid Fayad on Instagram"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-instagram"></i>
               </span>
@@ -921,13 +1964,17 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
 
             <a
               href="https://youtube.com/@abdullhamid-mido22"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card youtube">
+              class="contact-card youtube"
+              aria-label="Visit Abdullhamid Fayad on YouTube"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-youtube"></i>
               </span>
@@ -938,13 +1985,17 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
 
             <a
               href="https://www.tiktok.com/@abdullhamid_fayad"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card tiktok">
+              class="contact-card tiktok"
+              aria-label="Visit Abdullhamid Fayad on TikTok"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-tiktok"></i>
               </span>
@@ -955,13 +2006,17 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
 
             <a
               href="https://wa.me/201091573063"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-card whatsapp">
+              class="contact-card whatsapp"
+              aria-label="Contact Abdullhamid Fayad on WhatsApp"
+            >
+
               <span class="contact-icon">
                 <i class="fa-brands fa-whatsapp"></i>
               </span>
@@ -972,35 +2027,61 @@
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+
             </a>
+
           </div>
 
           <div class="contact-bottom reveal">
-            <span>Prefer WhatsApp?</span>
 
-            <a href="https://wa.me/201091573063" target="_blank" rel="noopener noreferrer">
+            <span>
+              Prefer WhatsApp?
+            </span>
+
+            <a
+              href="https://wa.me/201091573063"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Start a conversation
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
+
           </div>
+
         </div>
       </section>
+
     </main>
 
     <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+         FOOTER
+    ====================================================== -->
+
     <footer class="site-footer">
+
       <div class="container footer-inner">
-        <a href="#top" class="footer-brand" aria-label="Back to top">
+
+        <a
+          href="#top"
+          class="footer-brand"
+          aria-label="Back to top"
+        >
+
           <span class="footer-mark">
-            <img src="icons/favicon.svg" alt="" />
+            <img
+              src="icons/favicon.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
           </span>
 
           <span>
             <strong>FAYAD</strong>
             <small>ABDULLHAMID FAYAD</small>
           </span>
+
         </a>
 
         <div class="footer-center">
@@ -1010,27 +2091,45 @@
         </div>
 
         <div class="footer-right">
-          <span>© 2026 FAYAD</span>
+
+          <span>
+            © 2026 FAYAD
+          </span>
 
           <a href="#top">
             Back to top
             <i class="fa-solid fa-arrow-up"></i>
           </a>
+
         </div>
+
       </div>
     </footer>
 
+    <!-- =====================================================
+         MAIN SCRIPT
+    ====================================================== -->
+
     <script src="script.js"></script>
 
-    <!-- Service Worker — بدون تغيير -->
+    <!-- =====================================================
+         SERVICE WORKER
+    ====================================================== -->
+
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/sw.js").catch((error) => {
-            console.warn("PWA registration failed:", error);
-          });
+          navigator.serviceWorker
+            .register("/sw.js")
+            .catch((error) => {
+              console.warn(
+                "PWA registration failed:",
+                error
+              );
+            });
         });
       }
     </script>
+
   </body>
 </html>
